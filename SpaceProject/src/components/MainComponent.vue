@@ -27,7 +27,7 @@ $(document).ready(function() {
 <nav class="main-nav">
   <div class="nav-bg"></div>
   <ul>
-    <li><a href="">Link</a></li>
+    <li><a href="">About</a></li>
     <li><a href="">Link</a></li>
     <li><a href="">Link</a></li>
     <li><a href="">Link</a></li>
@@ -37,7 +37,7 @@ $(document).ready(function() {
   <div class="Head">Let`s discover the SPACE</div>
 </div>
 <div class="content-wrapper normal_text">
-  <h1>Exploring the Cosmos: Unveiling the Wonders of Space</h1>
+  <h1 class="boldtext">Exploring the Cosmos: Unveiling the Wonders of Space</h1>
     
   <p>At the heart of our space exploration journey lies an insatiable curiosity about the universe's most perplexing enigmas. The cosmos, with its boundless expanse, holds within it a treasure trove of unanswered questions that have captivated humanity for centuries.</p>
 
@@ -123,6 +123,45 @@ $(document).ready(function() {
   
 
 </div>
+<footer class="bg-dark text-center text-white">
+
+  <div class="container p-4 pb-0">
+
+    <section class="mb-4">
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"><img class="footer-icon" src="./icons/icons8-github.svg" alt=""></i
+      ></a>
+
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"><img class="footer-icon" src="./icons/icons8-instagram.svg" alt=""></i
+      ></a>
+
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"><img class="footer-icon" src="./icons/icons8-telegram.svg" alt=""></i
+      ></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"><img class="footer-icon" src="./icons/icons8-facebook.svg" alt=""></i
+      ></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"><img class="footer-icon" src="./icons/icons8-twitter.svg" alt=""></i
+      ></a>
+
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"><img class="footer-icon" src="./icons/icons8-linkedin.svg" alt=""></i
+      ></a>
+    </section>
+
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">Source: <a class="nasa_link" href="https://api.nasa.gov/">NASA api</a></div>
+
+</footer>
 
 </template>
 
@@ -149,8 +188,10 @@ $(document).ready(function() {
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./icons/bg.png');
-  background: #1A1C22;
+  background-image: url('./icons/bdstarsdark2.jpg');
+
+  background-size: 100% ;
+  /* background: #1A1C22; */
   color: white;
   min-width: 1250px;
 
@@ -216,10 +257,11 @@ nav a:hover {
 .bg-visible {
   top: 0;
   opacity: 1;
+  height: 2.5rem;
 }
 
 .Head {
-
+  color: rgb(220, 120, 0);
   text-align: center;
   font-family: Trirong;
   font-weight: 700;   
@@ -232,7 +274,7 @@ nav a:hover {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background: rgb(50, 50, 50);
   background: url(./icons/mainphoto.jpg) no-repeat 50% 50% fixed;
   background-size: 130%;
@@ -252,7 +294,7 @@ nav a:hover {
 
 .content-wrapper {
   width: 80%;
-  height: 3000px;
+  height: 2100px;
   padding: 1em 10%;
   box-sizing: content-box;
   
@@ -381,7 +423,7 @@ nav a:hover {
 .cart_btn{
     position: absolute;
     bottom: 20px;
-    margin-bottom: 1rem;
+    margin: 0rem 0rem 1rem 1rem;
     width: 165px;
     height: 62px;
     cursor: pointer;
@@ -396,6 +438,16 @@ nav a:hover {
     box-shadow:  -10px -10px 20px #ad6744,
              10px 10px 20px #ff9966;
 }
-
-
+.m-1{
+  border-radius: 5rem;
+  padding: 0.3rem;
+  border-color: transparent;
+}
+.footer-icon{
+  width: 35px;
+  height: 35px;
+}
+.nasa_link{
+  color: white;
+}
 </style>
