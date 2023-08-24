@@ -1,49 +1,51 @@
-<script >
+<script>
 
-  
 import $ from 'jquery';
-
 
 export default {
   data() {
     return {
       cardData: [],
+      currentPage: 1, // Initialize currentPage
+      totalPages: 9, // Total number of pages
     };
   },
-  methods: {
-    openModal() {
-      this.showModal = true;
-    },
-    closeModal() {
-      this.showModal = false;
-    },
-  },
-
-  // fetching
   mounted() {
-    fetch('https://api.nasa.gov/techtransfer/patent/?engine&api_key=eJMyDTpOHHfmxGjf8yuuWMnfDxZIMuI3pk56Nh8U')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Network response was not ok: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        const importantData = data.results;
-        console.log(importantData)
-        this.getValue(importantData);
-      })
-      .catch(error => {
-        console.error("Fetch error:", error);
-      });
+    this.getpage(this.currentPage); // Call getpage with currentPage
   },
   methods: {
+    getpage(pageNumber) {
+      this.currentPage = pageNumber; // Update currentPage
+    
+    const baseUrl = "https://api.nasa.gov/techtransfer/patent/";
+    const apiKey = "eJMyDTpOHHfmxGjf8yuuWMnfDxZIMuI3pk56Nh8U";
+    const apiUrl = `${baseUrl}?engine&api_key=${apiKey}&page=${pageNumber}`;
+    console.log(this.currentPage); // Corrected spelling
+      fetch(apiUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          const importantData = data.results;
+          this.cardData = [];
+          this.getValue(importantData);
+          console.log(importantData);
+        })
+        .catch(error => {
+          console.error("Fetch error:", error);
+        });
+    },
     getValue(data) {
-      for (let i = 0; i < data.length; i++) {
+      for (let i = 20; i < 36; i++) {
         const item = data[i];
-        const plainDescription = item[3].replace(/<\/?span[^>]*>/g, ''); // Remove <span> tags
+        const Description = item[3].replace(/<\/?span[^>]*>/g, ''); // Remove <span> tags
+        const topik = item[3].replace(/<\/?span[^>]*>/g, ''); // Remove <span> tags
         this.cardData.push({
-          description: plainDescription,
+          head: topik,
+          description: Description,
           image: item[10],
           showModal: false, 
         });
@@ -94,12 +96,12 @@ $('description').keyup(function() {
     </div>
 </header>
 
-<div class="content-wrapper normal_text">
-  <h1 class="boldtext">NASA's Technology Transfer Program</h1>
+<div class="content-wrapper ">
+  <h1 class="boldtext normal_text">NASA's Technology Transfer Program</h1>
     
-  <p>innovations forged in the crucible of exploration and discovery are seamlessly integrated into the fabric of our daily lives. This program exemplifies NASA's dedication to the broader public, making its rich patent portfolio available for the benefit of the United States' citizens. By fostering partnerships and entering into licensing agreements with various industries, these patents become the bedrock upon which a thriving economy is built, jobs are created, and the overall quality of life is elevated.</p>
+  <p class="normal_text">innovations forged in the crucible of exploration and discovery are seamlessly integrated into the fabric of our daily lives. This program exemplifies NASA's dedication to the broader public, making its rich patent portfolio available for the benefit of the United States' citizens. By fostering partnerships and entering into licensing agreements with various industries, these patents become the bedrock upon which a thriving economy is built, jobs are created, and the overall quality of life is elevated.</p>
 
-  <p>At its core, this program epitomizes the spirit of pioneering research. It bridges the gap between the frontiers of space and the realms of practical application, ensuring that the monumental investments made by NASA in pushing the boundaries of knowledge find resonating echoes in the advancement of our society. These innovations, often birthed in the pursuit of understanding the cosmos, don a new role as catalysts for transformative change in sectors ranging from technology and healthcare to transportation and energy.</p>
+  <p class="normal_text">At its core, this program epitomizes the spirit of pioneering research. It bridges the gap between the frontiers of space and the realms of practical application, ensuring that the monumental investments made by NASA in pushing the boundaries of knowledge find resonating echoes in the advancement of our society. These innovations, often birthed in the pursuit of understanding the cosmos, don a new role as catalysts for transformative change in sectors ranging from technology and healthcare to transportation and energy.</p>
 
   <div class="orange-line"></div>
   <div class="row">
@@ -121,7 +123,18 @@ $('description').keyup(function() {
       </div>
     </div>
   </div>
- 
+
+  <div class="pagination">
+    <a href="" @click.prevent="getpage(1)">1</a>
+    <a href="" @click.prevent="getpage(2)">2</a>
+    <a href="" @click.prevent="getpage(3)">3</a>
+    <a href="" @click.prevent="getpage(10)">4</a>
+    <a href="" @click.prevent="getpage(5)">5</a>
+    <a href="" @click.prevent="getpage(6)">6</a>
+    <a href="" @click.prevent="getpage(7)">7</a>
+    <a href="" @click.prevent="getpage(8)">8</a>
+    <a href="" @click.prevent="getpage(9)">9</a>
+</div>
 
 </div>
 </div>
@@ -239,7 +252,6 @@ header {
   overflow: hidden;
   border-radius: 0 0 85% 85% / 10%;
   color: rgb(220, 120, 0);
-  text-align: center;
   font-family: Trirong;
   font-weight: 700;   
   font-size: 60px;
@@ -294,6 +306,9 @@ header .overlay{
 .row{
   margin-top: 2rem;
 }
+.card{
+  position: relative;
+}
 .cart-descr{
   height: 100%;
   margin-bottom: 1rem;
@@ -302,19 +317,23 @@ header .overlay{
   color: white;
   background-color:#333 ;
   transition-duration: 0.3s;
-  position: static ;
+
 }
 
 .cart_btn{
-
+    position: absolute;
     width: 6rem;
     height: 2rem;
     cursor: pointer;
     color: #fff;
     background: #1A1C22;
+    border: 1px solid #333640;
     font-size: 17px;
     border-radius: 0.5rem;
-    border: none;
+
+    bottom: 0;
+    left: 5%;
+    
 }
 .cart_btn.closed{
   background: #333640;
@@ -361,6 +380,25 @@ header .overlay{
   border-radius: 5rem;
   padding: 0.3rem;
   border-color: transparent;
+}
+
+.pagination{
+  justify-content: center;
+
+}
+.pagination a{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5rem;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+
+}
+.pagination a:hover{
+  background-color: #FFF;
+  color: #151515;
 }
 
 </style>

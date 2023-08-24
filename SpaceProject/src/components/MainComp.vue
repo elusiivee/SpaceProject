@@ -67,7 +67,7 @@ export default {
               </div>
               <div class="front">
                 <div class="front-content">
-                    <button class="cart_btn">More Info</button>
+                    <button class="cart_btn boldtext">More Info</button>
                 </div>
               </div>
         </div>
@@ -95,7 +95,7 @@ export default {
               </div>
               <div class="front">
                 <div class="front-content">
-                    <button class="cart_btn">More Info</button>
+                    <button class="cart_btn boldtext">More Info</button>
                 </div>
               </div>
         </div>
@@ -116,7 +116,7 @@ export default {
               </div>
               <div class="front">
                 <div class="front-content">
-                    <button class="cart_btn">More Info</button>
+                    <button class="cart_btn boldtext">More Info</button>
                 </div>
               </div>
         </div>
@@ -144,7 +144,7 @@ export default {
               </div>
               <div class="front">
                 <div class="front-content">
-                    <button @click="onTechclick()" class="cart_btn" >More Info</button>
+                    <button @click="onTechclick()" class="cart_btn boldtext" >More Info</button>
                 </div>
               </div>
         </div>
@@ -254,7 +254,7 @@ nav a:hover {
 }
 
 .Head {
-  color: rgb(220, 120, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-family: Trirong;
   font-weight: 700;   
@@ -269,7 +269,7 @@ nav a:hover {
   width: 100%;
   height: 100vh;
   background: rgb(50, 50, 50);
-  background: url(./icons/mainphoto.jpg) no-repeat 50% 50% fixed;
+  background: url(./icons/mainphoto.jpg) no-repeat 50% 50%;
   background-size: 130%;
   overflow: hidden;
 }
@@ -417,8 +417,8 @@ nav a:hover {
     position: absolute;
     bottom: 20px;
     margin: 0rem 0rem 1rem 1rem;
-    width: 165px;
-    height: 62px;
+    width: 215px;
+    height: 100px;
     cursor: pointer;
     color: #fff;
     background: #1A1C22;
