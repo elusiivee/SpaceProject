@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../components/MainComp.vue'
 import Technology from '../components/Technology.vue'
-import FetchinConstructurTech from '../components/FetchinConstructurTech.vue'
+import Earth from '../components/EarthComponent.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,11 +25,11 @@ const router = createRouter({
 
     },
     {
-      path: '/FetchinConstructurTech',
-      name: 'FetchinConstructurTech',
-      component: FetchinConstructurTech
+      path: '/earth',
+      name: 'earth',
+      component: Earth
 
-    }
+    },
   ]
 })
 

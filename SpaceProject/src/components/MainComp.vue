@@ -23,8 +23,11 @@ $(document).ready(function() {
 
 export default {
   methods: {
-    onTechclick() {
+    onTechclink() {
       this.$router.push('/technology');
+    },
+    onEarthlink() {
+      this.$router.push('/earth');
     },
   },
 };
@@ -95,7 +98,7 @@ export default {
               </div>
               <div class="front">
                 <div class="front-content">
-                    <button class="cart_btn boldtext">More Info</button>
+                    <button class="cart_btn boldtext" @click="onEarthlink()">More Info</button>
                 </div>
               </div>
         </div>
@@ -144,7 +147,7 @@ export default {
               </div>
               <div class="front">
                 <div class="front-content">
-                    <button @click="onTechclick()" class="cart_btn boldtext" >More Info</button>
+                    <button @click="onTechclink()" class="cart_btn boldtext" >More Info</button>
                 </div>
               </div>
         </div>
@@ -180,9 +183,7 @@ export default {
 .my-body {
   margin: 0;
   padding: 0;
-
   background-image: url('./icons/bdstarsdark2.jpg');
-
   background-size: 100% ;
   /* background: #1A1C22; */
   color: white;
@@ -287,10 +288,7 @@ nav a:hover {
 
 .content-wrapper {
   width: 80%;
-
-  padding: 1em 10%;
-  box-sizing: content-box;
-  
+  margin: 0 auto;
 }
 
 .content-wrapper h1 {

@@ -74,9 +74,9 @@ export default {
 
 //create max length of string
 
-var maxLength = 15;
+let maxLength = 15;
 $('description').keyup(function() {
-  var textlen = maxLength - $(this).val().length;
+  let textlen = maxLength - $(this).val().length;
   $('#maxchars').text(textlen);})
 </script>
 
@@ -106,9 +106,9 @@ $('description').keyup(function() {
   <div class="orange-line"></div>
   <div class="row">
     <div v-for="card in cardData" :key="card.description" class="col-3" style="margin-bottom: 1rem;">
-      <div class="card cart-descr normal_text">
+      <div class="card cart-descr ">
         <img :src="card.image" :alt="card.description" style="margin-bottom: 0.5rem;" />
-        <p>{{ limit(card.description, 100) }}</p>
+        <p class="normal_text">{{ limit(card.description, 100) }}</p>
         <button class="cart_btn" @click="openModal(card)">More</button>
         <div v-if="card.showModal" class="modal-overlay">
           <div class="modal-content">
@@ -116,7 +116,8 @@ $('description').keyup(function() {
               <button @click="closeModal(card)" class="cart_btn closed">Close</button>
             </div>
             <div class="modal-body">
-              {{ card.description }}
+              <img :src="card.image" :alt="card.description" class="discr_img" />
+              <p class="normal_text">{{ card.description }}</p>
             </div>
           </div>
         </div>
@@ -282,10 +283,8 @@ header .overlay{
 
 .content-wrapper {
   width: 80%;
+  margin: 0 auto;
 
-  padding: 1em 10%;
-  box-sizing: content-box;
-  
 }
 
 .content-wrapper h1 {
@@ -318,6 +317,13 @@ header .overlay{
   background-color:#333 ;
   transition-duration: 0.3s;
 
+}
+.discr_img{
+  border-radius: 1rem;
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
 }
 
 .cart_btn{
