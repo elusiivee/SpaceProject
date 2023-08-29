@@ -49,7 +49,7 @@ export default {
   <div class="Head">Let`s discover the SPACE</div>
 </div>
   <div class="content-wrapper normal_text">
-  <h1 class="boldtext">Exploring the Cosmos: Unveiling the Wonders of Space</h1>
+  <h1 class="boldtext" style="margin-top: 2rem;">Exploring the Cosmos: Unveiling the Wonders of Space</h1>
     
   <p>At the heart of our space exploration journey lies an insatiable curiosity about the universe's most perplexing enigmas. The cosmos, with its boundless expanse, holds within it a treasure trove of unanswered questions that have captivated humanity for centuries.</p>
 
@@ -62,7 +62,7 @@ export default {
      <div class="row">
     <div class="col-6">
       <div class="cards">
-        <div class="content">
+        <div class="content">ґ
               <div class="back">
                 <div class="back-content cartPhoto">
                     <img src="./icons/asteroids.jpg" alt="">
@@ -184,7 +184,7 @@ export default {
   margin: 0;
   padding: 0;
   background-image: url('./icons/bdstarsdark2.jpg');
-  background-size: 100% ;
+  background-size: 110% ;
   /* background: #1A1C22; */
   color: white;
   min-width: 1250px;

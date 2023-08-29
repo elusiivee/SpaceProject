@@ -1,45 +1,50 @@
 <script>
-import $ from 'jquery';
 
-$(function(){
-  $('#datepicker').datepicker();
-});
+
 
 export default {
   data() {
     return {
-      earthData: [],
+
+      earthDataimg: [],
+      earthimg: [],
       year: '',
       month: '',
       day: ''
     };
   },
   methods: {
-    fetchData() {
-      const apiUrl = "your_api_url_here"; // Replace with the actual API URL
+    async fetchData() {
+      const apiUrl = `https://api.nasa.gov/EPIC/api/natural/date/${this.year}-${this.month}-${this.day}?api_key=eJMyDTpOHHfmxGjf8yuuWMnfDxZIMuI3pk56Nh8U`;
+      console.log(apiUrl);
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.status}`);
+      }
+      const data = await response.json();                           //whole array
+      console.log(data);
 
-      fetch(apiUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`Network response was not ok: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          const importantData = data.results;
-          this.earthData = [];
-          this.getValue(importantData);
-          console.log(importantData);
-        })
-        .catch(error => {
-          console.error("Fetch error:", error);
-        });
+      for (let value in data) {                     
+        this.earthDataimg.push(data[value].image);
+      }
+      console.log(this.earthDataimg);                               //image name
+
+      this.earthimg = [];
+      for (const name of this.earthDataimg) {
+        const imgurl = `https://epic.gsfc.nasa.gov/archive/natural/${this.year}/${this.month}/${this.day}/jpg/${name}.jpg`;
+        this.earthimg.push(imgurl);
+      }
+      this.earthDataimg = [];             //clean
+      console.log(this.earthimg);                                    //image url
     },
-    getdata(){
-
-    }
+    toHomePage() {
+      this.$router.push('/');
+    },
   }
 };
+
+
+
 </script>
 
 <template>
@@ -61,33 +66,60 @@ export default {
     </header>
 
     <div class="content-wrapper ">
-        <h1 class="boldtext normal_text">NASA's Technology Transfer Program</h1>
+        <h1 class="boldtext normal_text">The Earth Polychromatic Imaging Camera</h1>
             
-        <p class="normal_text">innovations forged in the crucible of exploration and discovery are seamlessly integrated into the fabric of our daily lives. This program exemplifies NASA's dedication to the broader public, making its rich patent portfolio available for the benefit of the United States' citizens. By fostering partnerships and entering into licensing agreements with various industries, these patents become the bedrock upon which a thriving economy is built, jobs are created, and the overall quality of life is elevated.</p>
+        <p class="normal_text">The Earth Polychromatic Imaging Camera (EPIC) API offers a remarkable opportunity to access and delve into the wealth of data collected by the EPIC instrument aboard the Deep Space Climate Observatory (DSCOVR) spacecraft. Situated at the Earth-Sun Lagrange point, this innovative instrument provides an unparalleled vantage point for capturing daily imagery of our planet in its entirety.</p>
 
-        <p class="normal_text">At its core, this program epitomizes the spirit of pioneering research. It bridges the gap between the frontiers of space and the realms of practical application, ensuring that the monumental investments made by NASA in pushing the boundaries of knowledge find resonating echoes in the advancement of our society. These innovations, often birthed in the pursuit of understanding the cosmos, don a new role as catalysts for transformative change in sectors ranging from technology and healthcare to transportation and energy.</p>
+        <p class="normal_text">One of EPIC's most captivating features is its ability to capture full disc imagery of Earth. This means that the instrument can capture the entire sunlit side of our planet in a single frame, showcasing the intricate patterns of clouds, oceans, landmasses, and the ever-changing interplay of sunlight and shadows across its surface. This comprehensive perspective aids in monitoring weather patterns, climate changes, and even natural events like volcanic eruptions, hurricanes, and forest fires.</p>
 
         <div class="orange-line"></div>
-    </div> 
-
-    <section class="container normal_text">
+        
+        <p class="normal_text">The minimal data is 2015-08-30</p>
+        <p class="normal_text">The current maximum date is 2023-08-15</p>
+        <p class="normal_text">If there are no photos:</p>
+        <ul class="normal_text">
+          <li>try to change your data. For example: day from 31 to 30</li>
+        </ul>  
+    <section class="container_data normal_text">
     <form class="row">
-      <label for="year" class="col-1 col-form-label">Year</label>
-      <div class="col-3">
+      <label for="year" class="col-2 col-form-label">Year:</label>
+      <div class="col-2">
         <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="^\d{4}$" required>
       </div>
-      <label for="month" class="col-1 col-form-label">Month</label>
-      <div class="col-3">
+      <label for="month" class="col-2 col-form-label">Month:</label>
+      <div class="col-2">
         <input type="text" placeholder="01-12" class="form-control" id="month" v-model="month" pattern="^(0[1-9]|1[0-2])$" required>
       </div>
-      <label for="day" class="col-1 col-form-label">Day</label>
-      <div class="col-3">
+      <label for="day" class="col-2 col-form-label">Day:</label>
+      <div class="col-2">
         <input type="text" placeholder="01-31" class="form-control" id="day" v-model="day" pattern="^(0[1-9]|[12][0-9]|3[01])$" required>
       </div>
-      <button class="btn btn-primary" @click="saveDate" style="margin-top: 1rem;">Save</button>
+      <button class="btn btn-primary" type='button' @click="fetchData()" style="margin-top: 1rem;">Save</button>
     </form>
   </section>
 
+
+  <div class="container_carousel">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+    <div v-for="(img, index) in earthimg" :key="index" class="carousel-item" :class="{ active: index === 0 }">
+        <img :src="img" alt="planet_photo">
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</button>
+    </div>
+  </div>
+
+
+
+  </div> 
 </div>    
 </template>
 
@@ -242,8 +274,8 @@ header .overlay{
   background-color: rgb(220, 120, 0);
   margin: 30px 0px 30px 0px; /* Adjust the margin as needed */
 }
-.container {
-  width: 80%;
+.container_data {
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -251,6 +283,10 @@ header .overlay{
   flex-direction: column;
   gap: 1rem;
 }
-
+.container_carousel{
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 80%;
+}
 
 </style>
