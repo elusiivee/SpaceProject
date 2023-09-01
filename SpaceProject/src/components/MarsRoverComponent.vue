@@ -1,6 +1,6 @@
 <script>
 
-import $ from 'jquery';
+
 
 export default {
     data() {
@@ -25,45 +25,61 @@ export default {
       }
       const data = await response.json();                           //whole array
       console.log(data);
-
-      for (let value in data.photos) {                     
-        this.roverphoto.push(data.photos[value].img_src);
+      this.roverphoto=[] 
+      for (let value in data.photos) {
+        const imgSrc = data.photos[value].img_src;
+        this.roverphoto.push({ img: imgSrc });
       }
       console.log(this.roverphoto);                               //image link
-
+                                             //clear array
 
 }
+
 }
 }
 
 </script>
 
 <template>
-<div class="my-body">
+  <div class="my-body">
+    <nav class="main-nav">
+      <div class="nav-bg"></div>
+      <ul>
+        <li><a href="" @click="toHomePage()">Home</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div class="overlay">
+        <p style="margin-top: 10rem;">Mars Rover</p>
+      </div>
+    </header>
 
-<nav class="main-nav">
-  <div class="nav-bg"></div>
-  <ul>
-    <li><a href="" @click="toHomePage()">Home</a></li>
-    <li><a href="">About</a></li>
-  </ul>
-</nav>
-<header>
-  <div class="overlay">
-    <p style="margin-top: 10rem ;">Mars Rover</p>
+    <div class="content-wrapper">
+      <h1 class="boldtext normal_text" style="margin-top: 2rem;">NASA's Technology Transfer Program</h1>
+      
+      <p class="normal_text">The Mars Rover API offers a unique opportunity to explore the Red Planet through the lens of NASA's Mars rovers: Curiosity, Opportunity, and Spirit. These robotic explorers have captured a treasure trove of images during their missions, unveiling the mysteries of Mars one photograph at a time. The API, thoughtfully maintained by Chris Cerami, serves as a gateway for developers, educators, and citizen scientists to access this wealth of visual data.</p>
+
+      <p class="normal_text">Each of the Mars rovers has its own dedicated repository of photos stored in the database. This means you can delve into the distinct journeys of Curiosity, Opportunity, and Spirit separately, examining their unique discoveries and perspectives on Mars. For those who prefer to explore Martian imagery based on Earth dates, the API has you covered. You can query for photos captured on a particular Earth date, making it convenient to correlate Mars and Earth timeframes.</p>
+      <div class="orange-line"></div>
+
+
+      <p class="normal_text">If you did`t get photos:
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseinfo" aria-expanded="false" >
+            More info
+        </button>
+    </p>
+    <div class="collapse" id="collapseinfo" style="margin-top: 1rem;">
+        <div class="card card-body">
+            <ul>
+                <li>Minimal date is 2013-05-02</li>
+                <li>Try to change your data. For example: day from 31 to 30</li>
+            </ul> 
+        </div>
     </div>
-</header>
-
-<div class="content-wrapper ">
-  <h1 class="boldtext normal_text" style="margin-top: 2rem;">NASA's Technology Transfer Program</h1>
-    
-  <p class="normal_text">The Mars Rover API offers a unique opportunity to explore the Red Planet through the lens of NASA's Mars rovers: Curiosity, Opportunity, and Spirit. These robotic explorers have captured a treasure trove of images during their missions, unveiling the mysteries of Mars one photograph at a time. The API, thoughtfully maintained by Chris Cerami, serves as a gateway for developers, educators, and citizen scientists to access this wealth of visual data.</p>
-
-  <p class="normal_text">Each of the Mars rovers has its own dedicated repository of photos stored in the database. This means you can delve into the distinct journeys of Curiosity, Opportunity, and Spirit separately, examining their unique discoveries and perspectives on Mars. For those who prefer to explore Martian imagery based on Earth dates, the API has you covered. You can query for photos captured on a particular Earth date, making it convenient to correlate Mars and Earth timeframes.</p>
-  <div class="orange-line"></div>
-
-  <section class="container_data normal_text">
-    <form class="row">
+      
+      <section class="container_data normal_text">
+        <form class="row">
       <label for="year" class="col-2 col-form-label" >Year:</label>
       <div class="col-2">
         <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
@@ -78,13 +94,16 @@ export default {
       </div>
       <button class="btn btn-primary" type='button' @click="fetchData()" style="margin-top: 1rem;">Save</button>
     </form>
-  </section>
-  
+      </section>
 
+      <div class="gallery" >
+        <div v-for="(photo, index) in roverphoto" :key="index" class="gallery-item">
+            <img :src="photo.img" alt="Mars Photo" class="gallery-image" />
+        </div>
+    </div>
 
-</div>
-</div>
-
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -107,18 +126,16 @@ export default {
 }
 
 
-
-
 .my-body {
   margin: 0;
   padding: 0;
 
-  /* background-image: url('./icons/bdstarsdark2.jpg') ; */
+
 
   background-size: 100% ;
   background: #1A1C22;
   color: white;
-  min-width: 1250px;
+  min-width: 1450px;
 
 }
 
@@ -242,11 +259,53 @@ header .overlay{
 
 .orange-line {
     height: 2px;
-  width: 100%; /* To span the entire width */
+  width: 100%; 
   background-color: #ed902e;
-  margin: 30px 0px 30px 0px; /* Adjust the margin as needed */
+  margin: 30px 0px 30px 0px; 
 }
-/* carts */
+.card{
+    margin-bottom: 1rem;
+    font-family: Trirong;
+    font-weight: 700;  
+    font-size: 1.0rem;
+    background-color:transparent;
+    color: #ffffff;
+    border: 2px solid black;
+}
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem; 
+}
 
+.gallery-item {
+  flex: 0 0 calc(25% - 20px); 
+  margin: 10px;
+}
+
+.gallery-image {
+    border-radius: 0.5rem;
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1); 
+}
+.btn{
+    margin-left: 1rem;
+    font-family: Trirong;
+    font-weight: 700;  
+    font-size: 1.2rem;
+    background-color: #ed902e;
+    border: none;
+}
+
+.btn:hover{
+  background-color: rgb(199, 120, 37)
+}
 </style>

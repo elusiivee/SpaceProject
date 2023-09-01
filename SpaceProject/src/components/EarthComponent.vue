@@ -88,12 +88,23 @@ export default {
 
         <div class="orange-line"></div>
         
-        <p class="normal_text">The minimal data is 2015-08-30</p>
-        <p class="normal_text">The maximal date is {{ maxDate() }}</p>
-        <p class="normal_text">If there are no photos:</p>
-        <ul class="normal_text">
-          <li>try to change your data. For example: day from 31 to 30</li>
-        </ul>  
+
+        <p class="normal_text">If you did`t get photos:
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseinfo" aria-expanded="false" >
+              More info
+          </button>
+        </p>
+        <div class="collapse" id="collapseinfo" style="margin-top: 1rem;">
+            <div class="card card-body">
+                  <p class="normal_text">The minimal data is 2015-08-30</p>
+                  <p class="normal_text">The maximal date is {{ maxDate() }}</p>
+                  <ul class="normal_text">
+                    <li>try to change your data. For example: day from 31 to 30</li>
+                  </ul>  
+            </div>
+        </div>
+
+
     <section class="container_data normal_text">
     <form class="row">
       <label for="year" class="col-2 col-form-label" >Year:</label>
@@ -137,7 +148,7 @@ export default {
 </div>    
 </template>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@400;700&display=swap');
 
@@ -163,12 +174,11 @@ input:invalid {
   margin: 0;
   padding: 0;
 
-  /* background-image: url('./icons/bdstarsdark2.jpg') ; */
 
   background-size: 100% ;
   background: #1A1C22;
   color: white;
-  min-width: 1250px;
+  min-width: 1450px;
 
 }
 
@@ -284,11 +294,19 @@ header .overlay{
 }
 .orange-line {
     height: 2px;
-  width: 100%; /* To span the entire width */
+  width: 100%; 
   background-color: #ed902e;
-  margin: 30px 0px 30px 0px; /* Adjust the margin as needed */
+  margin: 30px 0px 30px 0px;
 }
-
+.card{
+    margin-bottom: 1rem;
+    font-family: Trirong;
+    font-weight: 700;  
+    font-size: 1.0rem;
+    background-color:transparent;
+    color: #ffffff;
+    border: 2px solid black;
+}
 .container_data {
   width: 60%;
   margin: 0 auto;
@@ -306,8 +324,19 @@ header .overlay{
 .carousel-item img {
   max-width: 100%;
   max-height: 100%;
-  width: auto; /* Allow the image to adjust its width proportionally */
-  height: auto; /* Allow the image to adjust its height proportionally */
+  width: auto;
+  height: auto; 
   margin: 0 auto;
+}
+.btn{
+    margin-left: 1rem;
+    font-family: Trirong;
+    font-weight: 700;  
+    font-size: 1.2rem;
+    background-color: #ed902e;
+    border: none;
+}
+.btn:hover{
+  background-color: rgb(199, 120, 37)
 }
 </style>

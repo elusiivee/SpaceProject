@@ -181,7 +181,7 @@ export default {
   background-size: 110% ;
   /* background: #1A1C22; */
   color: white;
-  min-width: 1250px;
+  min-width: 1450px;
 
 }
 
@@ -276,7 +276,7 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Maintains aspect ratio and covers the entire container */
+  object-fit: cover;
 }
 
 .mainPlanet h1 {
@@ -305,9 +305,9 @@ video {
 
 .orange-line {
     height: 2px;
-  width: 100%; /* To span the entire width */
+  width: 100%; 
   background-color:  #ed902e;
-  margin: 30px 0px 30px 0px; /* Adjust the margin as needed */
+  margin: 30px 0px 30px 0px;
 }
 /* carts */
 .row{
@@ -320,7 +320,7 @@ video {
   border-radius: 2rem;
 }
 .cards img{
-  width: 99%; /* Make the image occupy the full width of the container */
+  width: 99%;
   height: 99%;
   object-fit: cover;
 }

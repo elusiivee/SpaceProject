@@ -173,7 +173,7 @@ $('description').keyup(function() {
   background-size: 100% ;
   background: #1A1C22;
   color: white;
-  min-width: 1250px;
+  min-width: 1450px;
 
 }
 

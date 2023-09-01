@@ -3,10 +3,10 @@ export default {
   methods: {
     scrollfc() {
       const topbtn = document.getElementById("btn-to-top");
-      if (
-        document.body.scrollTop > 500 ||
-        document.documentElement.scrollTop > 500
-      ) {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      
+      if (scrollY > windowHeight / 2) {
         topbtn.style.display = "block";
       } else {
         topbtn.style.display = "none";
@@ -28,20 +28,35 @@ export default {
 
 <template>
   <div>
-    <button id="btn-to-top" @click="backToTop" class="btn-to-top"><img src="./icons/totopbtn.png" style="height: 100px; width: 100px; object-fit: contain;" alt=""></button>
+    <button id="btn-to-top" @click="backToTop" class="btn-to-top btn_text">
+      <img src="./icons/arrow.svg" alt="" style="width: 30px;">
+    </button>
   </div>
 </template>
 
-<style>
+<style scoped> 
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
+
+
+.btn_text{
+  font-family: Trirong;
+    font-weight: 700;  
+    font-size: 1.2rem;
+}
 .btn-to-top {
+  padding: 1.5rem 0.7rem 0.7rem 1.2rem;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  background-size: cover;
-  background-repeat: no-repeat;
+  bottom: 0px;
+  right: 0%;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #ed912e;
+  border-radius: 100px 0px 0px;
   border: none;
+}
+
+.btn-to-top:hover {
+  background-color: rgb(199, 120, 37);
+
 }
 </style>
