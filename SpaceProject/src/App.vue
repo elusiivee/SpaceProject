@@ -26,7 +26,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import { RouterLink, RouterView } from 'vue-router';
 
 import FooterVue from './components/footer.vue';
-
+import backToTop from './components/BackToTopbtn.vue';
 
 
  </script>
@@ -35,6 +35,7 @@ import FooterVue from './components/footer.vue';
 
 
   <RouterView />
+  <backToTop />
   <FooterVue />
  </template>
  

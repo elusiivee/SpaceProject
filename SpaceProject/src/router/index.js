@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../components/MainComp.vue'
-import Technology from '../components/Technology.vue'
+import HomeView from '../components/MainComponent.vue'
+import Technology from '../components/TechnologyComponent.vue'
 import Earth from '../components/EarthComponent.vue'
-
+import MarsRover from '../components/MarsRoverComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +28,12 @@ const router = createRouter({
       path: '/earth',
       name: 'earth',
       component: Earth
+
+    },
+    {
+      path: '/marsrover',
+      name: 'marsrover',
+      component: MarsRover
 
     },
   ]

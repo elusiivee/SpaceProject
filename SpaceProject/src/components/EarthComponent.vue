@@ -1,6 +1,11 @@
 <script>
 
-
+// let date = new Date();
+// let year = date.getFullYear();
+// let month = date.getMonth() + 1;
+// console.log(year,month);
+// let DaysInThisMonth = function(year,month){
+//     return new Date(year,month, 0).getDate();
 
 export default {
   data() {
@@ -40,6 +45,15 @@ export default {
     toHomePage() {
       this.$router.push('/');
     },
+    maxDate() {                                                      // max date is 27 days less than the current one
+      let date = new Date();
+      date.setDate(date.getDate() - 27);
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDate();
+
+  return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+}
   }
 };
 
@@ -66,7 +80,7 @@ export default {
     </header>
 
     <div class="content-wrapper ">
-        <h1 class="boldtext normal_text">The Earth Polychromatic Imaging Camera</h1>
+        <h1 class="boldtext normal_text" style="margin-top: 2rem;">The Earth Polychromatic Imaging Camera</h1>
             
         <p class="normal_text">The Earth Polychromatic Imaging Camera (EPIC) API offers a remarkable opportunity to access and delve into the wealth of data collected by the EPIC instrument aboard the Deep Space Climate Observatory (DSCOVR) spacecraft. Situated at the Earth-Sun Lagrange point, this innovative instrument provides an unparalleled vantage point for capturing daily imagery of our planet in its entirety.</p>
 
@@ -75,16 +89,16 @@ export default {
         <div class="orange-line"></div>
         
         <p class="normal_text">The minimal data is 2015-08-30</p>
-        <p class="normal_text">The current maximum date is 2023-08-15</p>
+        <p class="normal_text">The maximal date is {{ maxDate() }}</p>
         <p class="normal_text">If there are no photos:</p>
         <ul class="normal_text">
           <li>try to change your data. For example: day from 31 to 30</li>
         </ul>  
     <section class="container_data normal_text">
     <form class="row">
-      <label for="year" class="col-2 col-form-label">Year:</label>
+      <label for="year" class="col-2 col-form-label" >Year:</label>
       <div class="col-2">
-        <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="^\d{4}$" required>
+        <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
       </div>
       <label for="month" class="col-2 col-form-label">Month:</label>
       <div class="col-2">
@@ -99,16 +113,16 @@ export default {
   </section>
 
 
-  <div class="container_carousel">
+  <div class="container_carousel" v-if="earthimg.length>0">
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
     <div v-for="(img, index) in earthimg" :key="index" class="carousel-item" :class="{ active: index === 0 }">
-        <img :src="img" alt="planet_photo">
+        <img :src="img" class="planet_image" alt="planet_photo">
     </div>
 </div>
 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Previous </span>
 </button>
 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -134,16 +148,16 @@ input:invalid {
 .normal_text{
   font-family: Trirong;
     font-weight: 700;  
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-indent: 1.5em;
 }
 
 .boldtext{
   font-family: Trirong;
   font-weight: 700;  
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
-  color: rgb(220, 120, 0);
+  color: #ed902e;
 }
 .my-body {
   margin: 0;
@@ -194,7 +208,7 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(220, 120, 0);
+  color: #ed902e;
 }
 
 .nav-bg {
@@ -229,7 +243,7 @@ header {
   position: relative;
   overflow: hidden;
   border-radius: 0 0 85% 85% / 10%;
-  color: rgb(220, 120, 0);
+  color: #ed902e;
   font-family: Trirong;
   font-weight: 700;   
   font-size: 60px;
@@ -265,15 +279,16 @@ header .overlay{
 
 .content-wrapper h1 {
   margin: 0;
-  color: rgb(220, 120, 0);
+  color: #ed902e;
   margin-bottom: 2.5rem;
 }
 .orange-line {
     height: 2px;
   width: 100%; /* To span the entire width */
-  background-color: rgb(220, 120, 0);
+  background-color: #ed902e;
   margin: 30px 0px 30px 0px; /* Adjust the margin as needed */
 }
+
 .container_data {
   width: 60%;
   margin: 0 auto;
@@ -288,5 +303,11 @@ header .overlay{
   margin-top: 2rem;
   width: 80%;
 }
-
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; /* Allow the image to adjust its width proportionally */
+  height: auto; /* Allow the image to adjust its height proportionally */
+  margin: 0 auto;
+}
 </style>
