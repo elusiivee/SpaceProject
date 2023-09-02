@@ -131,14 +131,14 @@ export default {
         <img :src="img" class="planet_image" alt="planet_photo">
     </div>
 </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous </span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-      </button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous </span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
     </div>
   </div>
 
@@ -172,8 +172,8 @@ input:invalid {
 .my-body {
   margin: 0;
   padding: 0;
-
-
+  justify-content: center; 
+  align-items: center;
   background-size: 100% ;
   background: #1A1C22;
   color: white;
@@ -281,9 +281,8 @@ header .overlay{
 }
 
 .content-wrapper {
-  width: 80%;
+  width: 1400px;
   margin: 0 auto;
-
 }
 
 .content-wrapper h1 {

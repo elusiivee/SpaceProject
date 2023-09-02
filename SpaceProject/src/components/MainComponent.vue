@@ -180,6 +180,8 @@ export default {
   background-image: url('./icons/bdstarsdark2.jpg');
   background-size: 110% ;
   /* background: #1A1C22; */
+  justify-content: center; 
+  align-items: center;
   color: white;
   min-width: 1450px;
 
@@ -291,7 +293,7 @@ video {
 }
 
 .content-wrapper {
-  width: 80%;
+  width: 1400px;
   margin: 0 auto;
 }
 

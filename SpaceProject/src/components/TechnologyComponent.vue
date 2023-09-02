@@ -168,9 +168,8 @@ $('description').keyup(function() {
 .my-body {
   margin: 0;
   padding: 0;
-
-  /* background-image: url('./icons/bdstarsdark2.jpg') ; */
-
+  justify-content: center; 
+  align-items: center;
   background-size: 100% ;
   background: #1A1C22;
   color: white;
@@ -283,9 +282,8 @@ header .overlay{
 }
 
 .content-wrapper {
-  width: 80%;
+  width: 1400px;
   margin: 0 auto;
-
 }
 
 .content-wrapper h1 {
@@ -404,7 +402,7 @@ header .overlay{
 
 }
 .pagination a:hover{
-  background-color: #FFF;
+  background-color: #ed902e;
   color: #151515;
 }
 
