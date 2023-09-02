@@ -28,8 +28,8 @@ export default {
 
 <template>
   <div>
-    <button id="btn-to-top" class="btn-to-top btn_text" style="display: none;">
-      <img src="./icons/arrow.svg" alt="" style="width: 30px;">
+    <button id="btn-to-top" @click="backToTop" class="btn-to-top">
+      <img src="./icons/arrow.svg" style="height: 40px; width: 40px; object-fit: contain;" alt="">
     </button>
   </div>
 </template>

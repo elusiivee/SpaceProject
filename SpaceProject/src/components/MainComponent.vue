@@ -50,7 +50,7 @@ export default {
 
   <p>Stay up to date with the forefront of scientific progress through our real-time news updates. Uncover the latest breakthroughs in space exploration, technological advancements, and theoretical revelations that redefine our understanding of the universe. Whether it's the discovery of a new exoplanet with potential habitability or insights into the origins of the universe itself, we're your trusted source for staying informed about the dynamic field of space science.</p>
 
-  <div class="orange-line"></div>
+  <div class="orange-line" style="margin: 30px 0px 30px 0px;"></div>
 
      <div class="row">
     <div class="col-6">
@@ -150,7 +150,7 @@ export default {
     </div>
   </div>
 </div>
-
+<div class="orange-line" style="margin: 30px 0px 0px 0px"></div>
 </div>
 </template>
 
@@ -307,8 +307,8 @@ video {
     height: 2px;
   width: 100%; 
   background-color:  #ed902e;
-  margin: 30px 0px 30px 0px;
 }
+
 /* carts */
 .row{
   margin-top: 2rem;

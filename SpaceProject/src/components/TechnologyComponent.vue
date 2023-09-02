@@ -6,21 +6,21 @@ export default {
   data() {
     return {
       cardData: [],
-      currentPage: 1, // Initialize currentPage
-      totalPages: 9, // Total number of pages
+      currentPage: 1, 
+      totalPages: 9,
     };
   },
   mounted() {
-    this.getpage(this.currentPage); // Call getpage with currentPage
+    this.getpage(this.currentPage); 
   },
   methods: {
     getpage(pageNumber) {
-      this.currentPage = pageNumber; // Update currentPage
+      this.currentPage = pageNumber;
     
     const baseUrl = "https://api.nasa.gov/techtransfer/patent/";
     const apiKey = "eJMyDTpOHHfmxGjf8yuuWMnfDxZIMuI3pk56Nh8U";
     const apiUrl = `${baseUrl}?engine&api_key=${apiKey}&page=${pageNumber}`;
-    console.log(this.currentPage); // Corrected spelling
+    console.log(this.currentPage); 
       fetch(apiUrl)
         .then(response => {
           if (!response.ok) {
@@ -138,6 +138,7 @@ $('description').keyup(function() {
 </div>
 
 </div>
+<div class="orange-line" style="margin: 30px 0px 0px 0px"></div>
 </div>
 
 </template>
@@ -297,9 +298,9 @@ header .overlay{
 
 .orange-line {
     height: 2px;
-  width: 100%; /* To span the entire width */
+  width: 100%; 
   background-color: #ed902e;
-  margin: 30px 0px 30px 0px; /* Adjust the margin as needed */
+  margin: 30px 0px 30px 0px; 
 }
 /* carts */
 .row{
