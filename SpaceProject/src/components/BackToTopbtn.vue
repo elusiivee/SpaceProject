@@ -3,10 +3,10 @@ export default {
   methods: {
     scrollfc() {
       const topbtn = document.getElementById("btn-to-top");
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const windowHeight = window.innerHeight;
-      
-      if (scrollY > windowHeight / 2) {
+      if (
+        document.body.scrollTop > 500 ||
+        document.documentElement.scrollTop > 500
+      ) {
         topbtn.style.display = "block";
       } else {
         topbtn.style.display = "none";
@@ -28,14 +28,13 @@ export default {
 
 <template>
   <div>
-    <button id="btn-to-top" @click="backToTop" class="btn-to-top btn_text">
+    <button id="btn-to-top" class="btn-to-top btn_text" style="display: none;">
       <img src="./icons/arrow.svg" alt="" style="width: 30px;">
     </button>
   </div>
 </template>
 
-<style scoped> 
-
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
 
 
