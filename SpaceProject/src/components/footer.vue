@@ -35,8 +35,8 @@
 
 </div>
 
-<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">Source: <a class="nasa_link" href="https://api.nasa.gov/">NASA api</a></div>
-
+<div class="nasa_link p-3" style="background-color: rgba(0, 0, 0, 0.2);">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
+<div class="nasa_link p-3" style="background-color: rgba(0, 0, 0, 0.2);"></div>
 </footer>
 </template>
 
@@ -58,4 +58,5 @@
 .nasa_link{
   color: white;
 }
+
 </style>

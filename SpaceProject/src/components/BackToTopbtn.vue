@@ -29,7 +29,7 @@ export default {
 <template>
   <div>
     <button id="btn-to-top" @click="backToTop" class="btn-to-top">
-      <img src="./icons/arrow.svg" style="height: 40px; width: 40px; object-fit: contain;" alt="">
+      <img src="./icons/arrow.svg" style="height: 20px; width: 20px;" alt="">to top
     </button>
   </div>
 </template>
@@ -44,13 +44,14 @@ export default {
     font-size: 1.2rem;
 }
 .btn-to-top {
-  padding: 1.5rem 0.7rem 0.7rem 1.2rem;
+  padding: 0.4rem 1rem 0.4rem 1rem;
   position: fixed;
   bottom: 0px;
-  right: 0%;
+  right: 50%; /* Center horizontally */
+  transform: translateX(50%); /* Center horizontally */
   cursor: pointer;
   background-color: #ed912e;
-  border-radius: 100px 0px 0px;
+  border-radius: 50px 50px 0px 0px;;
   border: none;
 }
 
@@ -58,4 +59,5 @@ export default {
   background-color: rgb(199, 120, 37);
 
 }
+
 </style>

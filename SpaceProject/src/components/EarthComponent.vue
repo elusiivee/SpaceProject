@@ -268,6 +268,9 @@ header .overlay{
   overflow: hidden;
   
 }
+.overlay:hover{
+  text-shadow: 0px 0px 20px #ed902e;
+}
 
 .mainPlanet h1 {
   position: absolute;

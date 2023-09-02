@@ -1,22 +1,5 @@
 <script>
-import $ from 'jquery';
-$(document).ready(function() {
-   $(window).on('scroll', function() {
-    if($(window).scrollTop() < 1000) {
-      $('.mainPlanet').css('background-size', 130 + parseInt($(window).scrollTop() / 5) + '%');
-      $('.mainPlanet h1').css('top', 50 + ($(window).scrollTop() * .1) + '%');
-      $('.mainPlanet h1').css('opacity', 1 - ($(window).scrollTop() * .003));
-    }
-     
-     if($(window).scrollTop() >= $('.content-wrapper').offset().top - 300) {
-       $('.nav-bg').removeClass('bg-hidden');
-       $('.nav-bg').addClass('bg-visible');
-     } else {
-       $('.nav-bg').removeClass('bg-visible');
-       $('.nav-bg').addClass('bg-hidden');
-     }
-  });
-});
+
 
 
 export default {
@@ -246,6 +229,10 @@ header .overlay{
   overflow: hidden;
   
 }
+.overlay:hover{
+  text-shadow: 0px 0px 20px #ed902e;
+}
+
 
 
 .mainPlanet h1 {
