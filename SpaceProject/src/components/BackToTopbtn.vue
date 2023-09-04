@@ -4,8 +4,8 @@ export default {
     scrollfc() {
       const topbtn = document.getElementById("btn-to-top");
       if (
-        document.body.scrollTop > 500 ||
-        document.documentElement.scrollTop > 500
+        document.body.scrollTop > 1000 ||
+        document.documentElement.scrollTop > 1000
       ) {
         topbtn.style.display = "block";
       } else {
@@ -47,8 +47,8 @@ export default {
   padding: 0.4rem 1rem 0.4rem 1rem;
   position: fixed;
   bottom: 0px;
-  right: 50%; /* Center horizontally */
-  transform: translateX(50%); /* Center horizontally */
+  right: 50%;
+  transform: translateX(50%);
   cursor: pointer;
   background-color: #ed912e;
   border-radius: 50px 50px 0px 0px;;

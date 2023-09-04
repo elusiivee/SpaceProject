@@ -32,7 +32,7 @@
       ><i class="fab fa-github"><img class="footer-icon" src="./icons/icons8-linkedin.svg" alt=""></i
     ></a>
   </section>
-
+  
 </div>
 
 <div class="nasa_link p-3" style="background-color: rgba(0, 0, 0, 0.2);">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>

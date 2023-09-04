@@ -31,6 +31,9 @@ export default {
     onMarsRoverlink() {
       this.$router.push('/marsrover');
     },
+    onAstrPict() {
+      this.$router.push('/astrpict');
+    },
   },
 };
 
@@ -44,13 +47,15 @@ export default {
 <div class="my-body">
   
 <nav class="main-nav">
-  <div class="nav-bg"></div>
+  <div class="nav-bg"><div class="orange-line"></div></div>
   <ul>
     <RouterLink to="/"><li><a href="">Home</a></li></RouterLink>
     
     <RouterLink to="/about"><li><a href="">about</a></li></RouterLink>
   </ul>
+  
 </nav>
+
 <div class="mainPlanet">
     <video autoplay loop muted plays-inline >
       <source src='./icons/videomain.mp4' type="video/mp4" >
@@ -58,6 +63,7 @@ export default {
     </video>
     <div class="Head">LET`s DISCOVER THE SPACE</div>
   </div>
+  <div class="orange-line" style="margin: 0px 0px 30px 0px;"></div>
   <div class="content-wrapper normal_text">
   <h1 class="boldtext" style="margin-top: 2rem;">Exploring the Cosmos: Unveiling the Wonders of Space</h1>
     
@@ -80,15 +86,15 @@ export default {
               </div>
               <div class="front">
                 <div class="front-content">
-                    <button class="cart_btn boldtext">More Info</button>
+                    <button class="cart_btn boldtext" @click="onAstrPict()">More Info</button>
                 </div>
               </div>
         </div>
       </div>
     </div>
     <div class="col-6">
-      <div class="boldtext" style="margin-top: 7rem;">Asteroids on the way</div>
-      <div class="normal_text" style="margin-top: 3rem;">At the forefront of scientific exploration, the Near Earth Object Web Service (NeoWs) stands as a testament to NASA's unwavering commitment to unraveling the mysteries of the cosmos. With its robust capabilities and user-friendly interface, NeoWs serves as a beacon of knowledge, illuminating the enigmatic world of near-earth asteroids. These celestial wanderers, shrouded in intrigue, hold profound implications for our understanding of space and its delicate interplay with our own planet.</div>
+      <div class="boldtext" style="margin-top: 7rem;">Astronomy Picture</div>
+      <div class="normal_text" style="margin-top: 3rem;">The Astronomy Picture of the Day (APOD) stands as a shining star among NASA's online offerings. Its popularity is not confined within the realms of space enthusiasts and scientists but extends far beyond, akin to the widespread appeal of a viral Justin Bieber video. This captivating website has succeeded in captivating the imagination of people worldwide.</div>
 
     </div>
   </div>

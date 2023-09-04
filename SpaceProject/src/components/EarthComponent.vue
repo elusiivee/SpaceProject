@@ -1,12 +1,5 @@
 <script>
 
-// let date = new Date();
-// let year = date.getFullYear();
-// let month = date.getMonth() + 1;
-// console.log(year,month);
-// let DaysInThisMonth = function(year,month){
-//     return new Date(year,month, 0).getDate();
-
 export default {
   data() {
     return {
@@ -75,7 +68,7 @@ export default {
 
     <header>
     <div class="overlay">
-        <p style="margin-top: 10rem ;">Earth</p>
+        <p style="margin-top: 10rem ;">OUR EARTH</p>
         </div>
     </header>
 

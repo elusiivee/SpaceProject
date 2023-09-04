@@ -92,7 +92,7 @@ $('description').keyup(function() {
 </nav>
 <header>
   <div class="overlay">
-    <p style="margin-top: 10rem ;">Space Technology</p>
+    <p style="margin-top: 10rem ;">SPACE TECHNOLOGY</p>
     </div>
 </header>
 
@@ -117,6 +117,7 @@ $('description').keyup(function() {
             </div>
             <div class="modal-body">
               <img :src="card.image" :alt="card.description" class="discr_img" />
+              <div class="orange-line"></div>
               <p class="normal_text">{{ card.description }}</p>
             </div>
           </div>
