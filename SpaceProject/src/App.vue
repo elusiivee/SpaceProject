@@ -27,13 +27,13 @@ import { RouterLink, RouterView } from 'vue-router';
 
 import FooterVue from './components/footer.vue';
 import backToTop from './components/BackToTopbtn.vue';
-
+import RegComp from './components/RegistrationComponent.vue';
 
  </script>
  
  <template>
 
-
+  
   <RouterView />
   <backToTop />
   <FooterVue />

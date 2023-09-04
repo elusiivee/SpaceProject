@@ -4,6 +4,7 @@ import Technology from '../components/TechnologyComponent.vue'
 import Earth from '../components/EarthComponent.vue'
 import MarsRover from '../components/MarsRoverComponent.vue'
 import AstrPict from '../components/AstronomyPictureComponent.vue'
+import Registration from '../components/RegistrationComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +13,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/reg',
+      name: 'reg',
+      component: Registration
     },
     {
       path: '/about',

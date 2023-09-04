@@ -1,6 +1,9 @@
 <script>
 
+
+
 export default {
+
   data() {
     return {
 
@@ -135,18 +138,17 @@ export default {
                             </form>
                         </section>
 
-                        <div class="collapse" id="currentday" style="margin-top: 1rem;">
-                            <div class="card card-body">
-                                <div class="container_pict">
-                                    <button class="btn btn-primary" type='button' @click="fetchCurrentData()" style="margin-top: 1rem;">get photo</button>
-                                    <div v-for="(item, index) in DayPhotoDate" :key="index">
+                        
+                            <div class="card card-body ">
+                                <div class="container_pict ">
+                                    <div class="normal_text" v-for="(item, index) in DayPhotoDate" :key="index">
                                         <h2 style="margin-top: 1rem;">{{ item.title }}</h2>
                                         <p>{{ item.explanation }}</p>
                                         <img :src="item.image" class="planet_image" :alt="item.title">
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
