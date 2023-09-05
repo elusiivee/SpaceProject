@@ -1,26 +1,28 @@
+<!-- not used -->
+
+
+
 <template>
     <div>
-      <input type="text" id="apiKeyInput" placeholder="Your API Key" class="form-control" v-model="apiKey">
-      <button @click="submitApiKey">Submit</button>
+      <input type="text" id="apiKeyInput" placeholder="Your API Key" class="form-control" v-model="apikey">
+      <button @click="savekey">Submit</button>
       <button @click="toHomePage">save</button>
     </div>
   </template>
   
 <script>
   export default {
+
     data() {
       return {
-        apiKey: '',
+        tempMessage: ""
       };
     },
     methods: {
-      savekey(){
-        localStorage.setItem('apiKey', this.apiKey);
-        console.log(this.apiKey)
-      },
-      toHomePage() {
-      this.$router.push('/');
+      submit: function() {
+        this.$emit("inputData", this.tempMessage);
+        this.tempMessage = "";
+      }
     }
-  }
-};
-</script>
+  };
+  </script>

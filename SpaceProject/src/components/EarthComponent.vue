@@ -40,7 +40,7 @@ export default {
     },
     maxDate() {                                                      // max date is 27 days less than the current one
       let date = new Date();
-      date.setDate(date.getDate() - 27);
+      date.setDate(date.getDate() - 29);
       let year = date.getFullYear();
       let month = date.getMonth() + 1;
       let day = date.getDate();
@@ -58,13 +58,7 @@ export default {
 
 <div class="my-body">
 
-    <nav class="main-nav">
-        <div class="nav-bg"></div>
-        <ul>
-            <li><a href="" @click="toHomePage()">Home</a></li>
-            <li><a href="">About</a></li>
-        </ul>
-    </nav>
+
 
     <header>
     <div class="overlay">
@@ -89,6 +83,7 @@ export default {
         </p>
         <div class="collapse" id="collapseinfo" style="margin-top: 1rem;">
             <div class="card card-body">
+              <p class="normal_text">There were periods when no photos were taken</p>
                   <p class="normal_text">The minimal data is 2015-08-30</p>
                   <p class="normal_text">The maximal date is {{ maxDate() }}</p>
                   <ul class="normal_text">
@@ -174,68 +169,7 @@ input:invalid {
 
 }
 
-.main-nav {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 35px;
-  font-family: Trirong;
-  font-weight: 700;  
-  font-size: 1.15em;
-  letter-spacing: 1px;
 
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: .2em 2em;
-  float: right;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0;
-  padding: .2em .7em;
-}
-
-nav a {
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-decoration: none;
-
-}
-
-nav a:hover {
-  color: #ed902e;
-}
-
-.nav-bg {
-    padding-bottom: 1rem;
-  content: '';
-  position: absolute;
-  display: block;
-  top: -100%;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: #151515;
-  transition: .45s ease-in-out;
-}
-
-.bg-hidden {
-  top: -100%;
-  opacity: 0;
-}
-
-.bg-visible {
-  top: 0;
-  opacity: 1;
-  height: 2.5rem;
-}
 header {
   text-align: center;
   width: 100%;
