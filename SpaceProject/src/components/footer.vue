@@ -57,6 +57,7 @@
 }
 .nasa_link{
   color: white;
+  font-size: 20px;
 }
 
 </style>
