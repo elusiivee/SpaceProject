@@ -68,7 +68,7 @@ export default {
 
     <div class="content-wrapper ">
         <h1 class="boldtext normal_text" style="margin-top: 2rem;">The Earth Polychromatic Imaging Camera</h1>
-            
+        <img src="./icons/astro_poly.png" alt="" class="spaceman">
         <p class="normal_text">The Earth Polychromatic Imaging Camera (EPIC) API offers a remarkable opportunity to access and delve into the wealth of data collected by the EPIC instrument aboard the Deep Space Climate Observatory (DSCOVR) spacecraft. Situated at the Earth-Sun Lagrange point, this innovative instrument provides an unparalleled vantage point for capturing daily imagery of our planet in its entirety.</p>
 
         <p class="normal_text">One of EPIC's most captivating features is its ability to capture full disc imagery of Earth. This means that the instrument can capture the entire sunlit side of our planet in a single frame, showcasing the intricate patterns of clouds, oceans, landmasses, and the ever-changing interplay of sunlight and shadows across its surface. This comprehensive perspective aids in monitoring weather patterns, climate changes, and even natural events like volcanic eruptions, hurricanes, and forest fires.</p>
@@ -268,4 +268,25 @@ header .overlay{
 .btn:hover{
   background-color: rgb(199, 120, 37)
 }
+.spaceman {
+  position: absolute;
+    left: 80%;
+    transform: translateX(70%) translateY(-80%) ;    
+    width: 200px;    
+    animation: spaceman-move 7s infinite ease-in-out;
+    
+}
+@keyframes spaceman-move {
+    from{
+        transform: translateX(70%) translateY(-80%);
+    }
+
+    50%{
+        transform: translateX(0%) translateY(-110%);
+    }
+
+    to{
+        transform: translateX(70%) translateY(-80%);
+      }
+    }   
 </style>

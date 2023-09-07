@@ -12,7 +12,8 @@
         <div class="mainPlanet" style="background: rgb(237,144,46); background: linear-gradient(140deg, rgba(237,144,46,1) 0%, rgba(98,61,21,1) 36%, rgba(21,17,92,1) 95%);">
           <img src="./icons/earth_poly.png" alt="" class="earth_poly">
           <img src="./icons/moon_poly.png" alt="" class="moon_poly">
-          <img src="./icons/commet_poly.png" alt="" class="commet_poly" style="top: -20em;left: -20em">
+          <img src="./icons/satelite.png" alt="" class="satelite_poly">
+          <img src="./icons/meteorit.png" alt="" class="commet_poly" style="top: -20em;left: -20em">
         </div>
         <div class="orange-line" style="margin-bottom: 2rem;"></div>
         <div class="content-wrapper">
@@ -168,10 +169,22 @@
 
     z-index: 1;
 }
+.satelite_poly{
+  width: 125px;
+    height: 125px;
+    position: absolute;
+    left: 33em;
+    top:50%;
+    transform:translateY(-50%);
+ 
+    animation: Satelite_orbit 10s infinite ease-in-out;
+
+    z-index: 1;
+}
 
 .commet_poly{
   position: absolute;
-  animation: commet_way 6s infinite ease-in-out;
+  animation: commet_way 6s infinite ease-in-out
 
   
 }
@@ -179,6 +192,17 @@
   49%{z-index: 1;}
   50%{left: 65em;
       top: 23em;
+     z-index: 0;}
+  99%{z-index: 0;}
+  100%{
+    left: 33em;
+    z-index: 1;
+  }
+}
+@keyframes Satelite_orbit {
+  49%{z-index: 1;}
+  50%{left: 66em;
+      top: 16em;
      z-index: 0;}
   99%{z-index: 0;}
   100%{
@@ -196,7 +220,7 @@
 }
 @keyframes commet_way {
   0% {
-        transform: translate(0, -50%) rotate(-120deg);
+        transform: translate(0, -50%) rotate(-100deg);
         opacity: 0;
     }
     10% {
