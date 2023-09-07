@@ -185,7 +185,9 @@ input:invalid {
   justify-content: center; 
   align-items: center;
   background-size: 100% ;
-  background: #1A1C22;
+  /* background: #1A1C22; */
+  background: rgb(187,116,41);
+  background: linear-gradient(220deg, rgba(187,116,41,1) 0%, rgba(26,28,34,1) 48%);
   color: white;
   min-width: 1450px;
 

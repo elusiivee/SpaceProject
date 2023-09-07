@@ -26,7 +26,7 @@ $(document).ready(function() {
         <ul>
         <RouterLink to="/"><li><a href="">Home</a></li></RouterLink>
         
-        <RouterLink to="/about"><li><a href="">about</a></li></RouterLink>
+        <RouterLink to="/about"><li><a href="">About</a></li></RouterLink>
         </ul>
     
   </nav>

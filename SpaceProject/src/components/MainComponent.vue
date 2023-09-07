@@ -70,7 +70,7 @@ export default {
     <div class="col-6">
       <div class="boldtext" style="margin-top: 7rem;">Astronomy Picture</div>
       <div class="normal_text" style="margin-top: 3rem;">The Astronomy Picture of the Day (APOD) stands as a shining star among NASA's online offerings. Its popularity is not confined within the realms of space enthusiasts and scientists but extends far beyond, akin to the widespread appeal of a viral Justin Bieber video. This captivating website has succeeded in captivating the imagination of people worldwide.</div>
-
+      <div><img src="./icons/moon.png" alt="" class="moon"></div>
     </div>
   </div>
 
@@ -125,6 +125,7 @@ export default {
 
   <div class="row">
     <div class="col-6">
+      <div><img src="./icons/spaceshuttle.png" alt="" class="spaceshuttle"></div>
       <div class="boldtext" style="margin-top: 7rem;">NASA's Technology Transfer Program</div>
       <div class="normal_text" style="margin-top: 3rem;">NASA's Technology Transfer Program is a groundbreaking initiative that plays a pivotal role in bridging the gap between space exploration and real-world applications. Born out of NASA's commitment to advancing scientific knowledge and benefiting society at large, the program aims to ensure that the cutting-edge technologies and innovations developed for space missions find practical applications here on Earth.</div>
     </div>
@@ -375,5 +376,47 @@ video {
     box-shadow:  -10px -10px 20px #ad6744,
              10px 10px 20px #ff9966;
 }
+.spaceshuttle{
+  position: absolute;
+    left: 30%;
+    transform: translateX(-10%) translateY(10%)  rotate(70deg);    
+    width: 150px;    
+    animation: roket-move 10s infinite ease-in-out;
+    
+}
+.moon {
+  position: absolute;
+    left: 80%;
+    transform: translateX(-10%) translateY(-30%) ;    
+    width: 200px;    
+    animation: moon-move 10s infinite ease-in-out;
+    
+}
 
+@keyframes moon-move {
+    from{
+        transform: translateX(-10%) translateY(10%);
+    }
+
+    50%{
+        transform: translateX(-90%) translateY(-15%);
+    }
+
+    to{
+        transform: translateX(-10%) translateY(10%);
+    }
+}
+@keyframes roket-move {
+    from{
+        transform: translateX(-10%) translateY(-30%)  rotate(50deg);
+    }
+
+    50%{
+        transform: translateX(-200%) translateY(-25%)  rotate(70deg);
+    }
+
+    to{
+        transform: translateX(-10%) translateY(-30%)  rotate(50deg);
+    }
+}
 </style>

@@ -40,7 +40,7 @@ export default {
     },
     maxDate() {                                                      // max date is 27 days less than the current one
       let date = new Date();
-      date.setDate(date.getDate() - 29);
+      date.setDate(date.getDate() - 34);
       let year = date.getFullYear();
       let month = date.getMonth() + 1;
       let day = date.getDate();
@@ -163,7 +163,8 @@ input:invalid {
   justify-content: center; 
   align-items: center;
   background-size: 100% ;
-  background: #1A1C22;
+  background: rgb(187,116,41);
+  background: linear-gradient(144deg, rgba(187,116,41,1) 0%, rgba(26,28,34,1) 48%);
   color: white;
   min-width: 1450px;
 
