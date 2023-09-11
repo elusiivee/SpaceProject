@@ -51,7 +51,7 @@ export default {
   <div class="orange-line" style="margin: 30px 0px 30px 0px;"></div>
 
      <div class="row">
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div class="cards">
         <div class="content">
               <div class="back">
@@ -67,7 +67,7 @@ export default {
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div class="boldtext" style="margin-top: 7rem;">Astronomy Picture</div>
       <div class="normal_text" style="margin-top: 3rem;">The Astronomy Picture of the Day (APOD) stands as a shining star among NASA's online offerings. Its popularity is not confined within the realms of space enthusiasts and scientists but extends far beyond, akin to the widespread appeal of a viral Justin Bieber video. This captivating website has succeeded in captivating the imagination of people worldwide.</div>
       <div><img src="./icons/moon.png" alt="animated moon" class="moon"></div>
@@ -75,11 +75,11 @@ export default {
   </div>
 
   <div class="row">
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div class="boldtext" style="margin-top: 7rem;">OUR EARTH</div>
       <div class="normal_text" style="margin-top: 3rem;">Nestled within the realms of cutting-edge space exploration, the EPIC API emerges as a formidable source of enlightenment, unraveling the mysteries of Earth's beauty from a vantage point like no other. Facilitating access to a trove of captivating daily imagery, this API unveils a remarkable chronicle of our planet as seen through the eyes of the Earth Polychromatic Imaging Camera (EPIC) instrument aboard the DSCOVR spacecraft.</div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div class="cards">
         <div class="content">
               <div class="back">
@@ -100,7 +100,7 @@ export default {
   </div>
 
   <div class="row">
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div class="cards">
         <div class="content">
               <div class="back">
@@ -116,7 +116,7 @@ export default {
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div class="boldtext" style="margin-top: 7rem;">Mars Rover</div>
       <div class="normal_text" style="margin-top: 3rem;">The captivating images captured by NASA's Curiosity, Opportunity, and Spirit rovers on Mars are opening new windows of exploration and understanding into the mysterious Red Planet. These rovers have journeyed across vast Martian landscapes, documenting the terrain, geological formations, and even the occasional dust storm. Now, in a stride toward fostering collaborative research and educational engagement, these invaluable images are being made more accessible than ever before, catering to the needs of developers, educators, and citizen scientists alike.</div>
 
@@ -124,12 +124,12 @@ export default {
   </div>
 
   <div class="row">
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div><img src="./icons/spaceshuttle.png" alt="animated shuttle" class="spaceshuttle"></div>
       <div class="boldtext" style="margin-top: 7rem;">NASA's Technology Transfer Program</div>
       <div class="normal_text" style="margin-top: 3rem;">NASA's Technology Transfer Program is a groundbreaking initiative that plays a pivotal role in bridging the gap between space exploration and real-world applications. Born out of NASA's commitment to advancing scientific knowledge and benefiting society at large, the program aims to ensure that the cutting-edge technologies and innovations developed for space missions find practical applications here on Earth.</div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6">
       <div class="cards">
         <div class="content">
               <div class="back">
@@ -182,7 +182,7 @@ export default {
   justify-content: center; 
   align-items: center;
   color: white;
-  min-width: 1450px;
+
 
 }
 
@@ -234,7 +234,7 @@ video {
 }
 
 .content-wrapper {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -258,7 +258,7 @@ video {
 }
 .cards {
   overflow: visible;
-  width: 580px;
+  width: 100%;
   height: 600px;
   border-radius: 2rem;
 }
