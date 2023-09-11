@@ -199,6 +199,7 @@ header {
   font-family: Trirong;
   font-weight: 700;   
   font-size: 60px;
+  
 }
 header .overlay{
   width: 100%;
@@ -209,6 +210,7 @@ header .overlay{
   background-image: url('./icons/technologyMain.jpg');
   background-size: 100%;
   overflow: hidden;
+  background-repeat: no-repeat;
   
 }
 .overlay:hover{

@@ -193,6 +193,7 @@ header .overlay{
   background-image: url('./icons/earth_main.jpg');
   background-size: 100%;
   overflow: hidden;
+  background-repeat: no-repeat;
   
 }
 .overlay:hover{

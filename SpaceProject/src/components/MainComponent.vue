@@ -389,7 +389,7 @@ video {
 .moon {
   position: absolute;
     left: 80%;
-    transform: translateX(-10%) translateY(-30%) ;    
+    transform: translateX(-65%) translateY(10%) ;    
     width: 200px;    
     animation: moon-move 10s infinite ease-in-out;
     
@@ -397,15 +397,15 @@ video {
 
 @keyframes moon-move {
     from{
-        transform: translateX(-10%) translateY(10%);
+        transform: translateX(-65%) translateY(10%);
     }
 
     50%{
-        transform: translateX(-90%) translateY(-15%);
+        transform: translateX(-55%) translateY(5%);
     }
 
     to{
-        transform: translateX(-10%) translateY(10%);
+        transform: translateX(-65%) translateY(10%);
     }
 }
 @keyframes roket-move {

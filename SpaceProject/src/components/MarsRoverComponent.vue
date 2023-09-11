@@ -52,7 +52,6 @@ export default {
 
     <div class="content-wrapper">
       <h1 class="boldtext normal_text" style="margin-top: 2rem;">NASA's Technology Transfer Program</h1>
-      <img src="./icons/marsrover.png" alt="animated rover" class="rover">
       <p class="normal_text">The Mars Rover API offers a unique opportunity to explore the Red Planet through the lens of NASA's Mars rovers: Curiosity, Opportunity, and Spirit. These robotic explorers have captured a treasure trove of images during their missions, unveiling the mysteries of Mars one photograph at a time. The API, thoughtfully maintained by Chris Cerami, serves as a gateway for developers, educators, and citizen scientists to access this wealth of visual data.</p>
       
       <p class="normal_text">Each of the Mars rovers has its own dedicated repository of photos stored in the database. This means you can delve into the distinct journeys of Curiosity, Opportunity, and Spirit separately, examining their unique discoveries and perspectives on Mars. For those who prefer to explore Martian imagery based on Earth dates, the API has you covered. You can query for photos captured on a particular Earth date, making it convenient to correlate Mars and Earth timeframes.</p>
@@ -144,7 +143,7 @@ header {
   background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
   text-align: center;
   width: 100%;
-  height: 40%;
+  height: 50rem;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -154,7 +153,6 @@ header {
   font-family: Trirong;
   font-weight: 700;   
   font-size: 60px;
-  object-fit: cover;
 }
 header .overlay{
   width: 100%;
@@ -172,16 +170,6 @@ header .overlay{
   text-shadow: 0px 0px 20px #ed902e;
 }
 
-.mainPlanet h1 {
-  position: absolute;
-  margin-bottom: 2rem;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  padding: .3em;
-  font-size: 3em;
-  font-weight: lighter;
-}
 
 .content-wrapper {
   max-width: 100%; 
@@ -247,27 +235,6 @@ header .overlay{
 
 .btn:hover{
   background-color: rgb(199, 120, 37)
-}
-.rover {
-  position: absolute;
-    left: 80%;
-    transform: translateX(70%) translateY(-80%) ;    
-    width: 200px;    
-    animation: rover-move 7s infinite ease-in-out;
-    
-}
-@keyframes rover-move {
-    from{
-        transform: translateX(70%) translateY(-100%);
-    }
-
-    50%{
-        transform: translateX(0%) translateY(-100%);
-    }
-
-    to{
-        transform: translateX(70%) translateY(-100%);
-    }
 }
 
 </style>
