@@ -120,7 +120,7 @@
   background-size: 100% ;
   background: #1A1C22;
   color: white;
-  min-width: 1450px;
+
   
 }
 .orange-line {
@@ -129,8 +129,15 @@
   background-color: #ed902e;
 }
 .content-wrapper {
-  width: 1400px;
+  max-width: 100%; 
+  width: 80%;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .content-wrapper h1 {

@@ -105,8 +105,13 @@ $('description').keyup(function() {
 
   <div class="orange-line"></div>
   <div class="row">
-    <div v-for="card in cardData" :key="card.description" class="col-3" style="margin-bottom: 1rem;">
-      <div class="card cart-descr ">
+    <div
+        v-for="card in cardData"
+        :key="card.description"
+        class="col-lg-3 col-md-4 col-sm-6 col-12"
+        style="margin-bottom: 1rem;"
+      >
+      <div class="card cart-descr">
         <img :src="card.image" :alt="card.description" style="margin-bottom: 0.5rem;" />
         <p class="normal_text">{{ limit(card.description, 100) }}</p>
         <button class="cart_btn" @click="openModal(card)">More</button>
@@ -174,7 +179,6 @@ $('description').keyup(function() {
   background-size: 100% ;
   background: #1A1C22;
   color: white;
-  min-width: 1450px;
 
 }
 
@@ -223,8 +227,10 @@ header .overlay{
 }
 
 .content-wrapper {
-  width: 1400px;
+  max-width: 100%;
+  width: 80%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .content-wrapper h1 {
@@ -244,9 +250,6 @@ header .overlay{
 /* carts */
 .row{
   margin-top: 2rem;
-}
-.card{
-  position: relative;
 }
 .cart-descr{
   height: 100%;

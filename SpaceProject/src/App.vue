@@ -12,8 +12,9 @@ import NavBar from "./components/NavComponent.vue"
 
 
     <RouterView />
-    <NavBar  />
+    
     <backToTop />
+    <NavBar  />
     <FooterVue />
 
  </template>

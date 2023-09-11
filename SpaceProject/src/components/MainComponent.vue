@@ -234,8 +234,10 @@ video {
 }
 
 .content-wrapper {
-  max-width: 1400px;
+  max-width: 100%; 
+  width: 80%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .content-wrapper h1 {

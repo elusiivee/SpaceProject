@@ -91,11 +91,14 @@ export default {
     </form>
       </section>
 
-      <div class="gallery" >
-        <div v-for="(photo, index) in roverphoto" :key="index" class="gallery-item">
-            <img :src="photo.img" alt="Mars Photo" class="gallery-image" />
-        </div>
-
+      <div class="gallery row">
+      <div
+        v-for="(photo, index) in roverphoto"
+        :key="index"
+        class="gallery-item col-lg-3 col-md-4 col-sm-6 col-12"
+      >
+        <img :src="photo.img" alt="Mars Photo" class="gallery-image" />
+      </div>
     </div>
 
     </div>
@@ -129,7 +132,6 @@ export default {
   background-size: 100% ;
   background: #1A1C22;
   color: white;
-  min-width: 1450px;
   justify-content: center; 
   align-items: center;
 }
@@ -138,10 +140,11 @@ export default {
 
 body{height: 900px;}
 header {
+  position: absolute;
   background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
   text-align: center;
   width: 100%;
-  height: 50rem;
+  height: 40%;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -151,6 +154,7 @@ header {
   font-family: Trirong;
   font-weight: 700;   
   font-size: 60px;
+  object-fit: cover;
 }
 header .overlay{
   width: 100%;
@@ -160,6 +164,7 @@ header .overlay{
   text-shadow: 1px 1px 1px #333;
   background-image: url('./icons/MarsRover.jpg');
   background-size: 100%;
+  background-repeat: no-repeat;
   overflow: hidden;
   
 }
@@ -179,8 +184,10 @@ header .overlay{
 }
 
 .content-wrapper {
-  width: 1400px;
+  max-width: 100%; 
+  width: 80%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .content-wrapper h1 {
@@ -207,26 +214,25 @@ header .overlay{
     border: 2px solid black;
 }
 
-.gallery {
+/* .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem; 
-}
+  margin-top: 2rem;
+} */
 
-.gallery-item {
-  flex: 0 0 calc(25% - 20px); 
+/* .gallery-item {
+  flex: 0 0 calc(33.33% - 20px); 
   margin: 10px;
-}
+} */
 
 .gallery-image {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
   width: 100%;
-  height: 15rem;
+  height: 350px; 
   margin-bottom: 1rem;
   object-fit: cover;
   transition: transform 0.2s ease-in-out;
 }
-
 .gallery-image:hover {
   transform: scale(1.1); 
 }
