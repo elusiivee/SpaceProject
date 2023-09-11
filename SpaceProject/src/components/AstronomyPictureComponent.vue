@@ -16,7 +16,8 @@ export default {
   },
   methods: {
     async fetchCurrentData() {
-      const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=eJMyDTpOHHfmxGjf8yuuWMnfDxZIMuI3pk56Nh8U`;
+      console.log('API Key:', this.apiKey);
+      const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=XQao0XpxPdsCgN0lTvFCKncPOo01fX4z1frh3nE1`;
       console.log(apiUrl);
       const response = await fetch(apiUrl);
       if (!response.ok) {
@@ -32,6 +33,7 @@ export default {
       console.log(this.DayPhotoTD);
     },
     async fetchDateData() {
+      
       const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=eJMyDTpOHHfmxGjf8yuuWMnfDxZIMuI3pk56Nh8U&date=${this.year}-${this.month}-${this.day}`;
       console.log(apiUrl);
       const response = await fetch(apiUrl);
@@ -71,7 +73,7 @@ export default {
 
     <div class="content-wrapper ">
         <h1 class="boldtext normal_text" style="margin-top: 2rem;">The Earth Polychromatic Imaging Camera</h1>
-        <img src="./icons/astro_poly.png" alt="" class="spaceman">
+        <img src="./icons/astro_poly.png" alt="Animated astronaut" class="spaceman">
         <p class="normal_text">The Earth Polychromatic Imaging Camera (EPIC) API offers a remarkable opportunity to access and delve into the wealth of data collected by the EPIC instrument aboard the Deep Space Climate Observatory (DSCOVR) spacecraft. Situated at the Earth-Sun Lagrange point, this innovative instrument provides an unparalleled vantage point for capturing daily imagery of our planet in its entirety.</p>
 
         <p class="normal_text">One of EPIC's most captivating features is its ability to capture full disc imagery of Earth. This means that the instrument can capture the entire sunlit side of our planet in a single frame, showcasing the intricate patterns of clouds, oceans, landmasses, and the ever-changing interplay of sunlight and shadows across its surface. This comprehensive perspective aids in monitoring weather patterns, climate changes, and even natural events like volcanic eruptions, hurricanes, and forest fires.</p>
@@ -83,7 +85,7 @@ export default {
             <p class="normal_text">Today's photo
             </p>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#currentday" aria-expanded="false" style="padding: 0.2rem 2em 0.2rem 2rem;" >
-                <img src="./icons/arrow_down.png" style="width: 15px; height: 15px; " alt="">
+                <img src="./icons/arrow_down.png" style="width: 15px; height: 15px; " alt="Arrow down">
             </button>
         
             <div class="collapse" id="currentday" style="margin-top: 1rem;">
@@ -94,9 +96,13 @@ export default {
                             <h2 style="margin-top: 1rem;">{{ item.title }}</h2>
                             <p>{{ item.explanation }}</p>
                             <img :src="item.image" class="planet_image" :alt="item.title">
+                            <div class="nasa_link" style="text-align: center;">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
                         </div>
+                        
                     </div>
+                    
                 </div>
+                
             </div>
         </div>
 
@@ -106,7 +112,7 @@ export default {
             <p class="normal_text">Photo by date
             </p>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#dateday" aria-expanded="false" style="padding: 0.2rem 2em 0.2rem 2rem;" >
-                <img src="./icons/arrow_down.png" style="width: 15px; height: 15px; " alt="">
+                <img src="./icons/arrow_down.png" style="width: 15px; height: 15px; " alt="arrow down">
             </button>
         
             <div class="collapse " id="dateday" style="margin-top: 1rem;">
@@ -137,9 +143,11 @@ export default {
                                         <h2 style="margin-top: 1rem;">{{ item.title }}</h2>
                                         <p>{{ item.explanation }}</p>
                                         <img :src="item.image" class="planet_image" :alt="item.title">
+                                        <div class="nasa_link" style="text-align: center;">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
                                     </div>
                                 </div>
                             </div>
+                            
                         
                     </div>
                 </div>
@@ -310,5 +318,9 @@ header .overlay{
     to{
         transform: translateX(70%) translateY(-80%);
     }
+}
+.nasa_link{
+  color: white;
+  font-size: 20px;
 }
 </style>

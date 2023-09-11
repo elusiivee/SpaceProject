@@ -1,26 +1,31 @@
+
+<!-- not used -->
+<!-- проблема в ключах що у них є ліміт. Хотів щоб юзер вводив свій ключ але перепробував багато способів і всі не працюють... -->
 <template>
   <div>
-    <input type="text" id="apiKeyInput" placeholder="Your API Key" class="form-control" v-model="apiKey">
-    <button @click="submitApiKey">Submit</button>
-    <button @click="toHomePage">save</button>
+    <p></p>
+    <input v-model="apiKey" placeholder="Enter API Key" />
+    <button @click="sandtoparent">Submit</button>
   </div>
 </template>
 
 <script>
+
 export default {
+  props:['fromChild'],
   data() {
     return {
       apiKey: '',
     };
   },
   methods: {
-    savekey(){
-      localStorage.setItem('apiKey', this.apiKey);
-      console.log(this.apiKey)
+    sandtoparent() {
+      this.$emit('api-key', this.apiKey);
+      this.$router.push({
+        name: 'home',
+      });
     },
-    toHomePage() {
-    this.$router.push('/');
-  }
-}
+    
+  },
 };
 </script>

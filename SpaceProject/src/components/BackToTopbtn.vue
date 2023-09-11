@@ -29,7 +29,7 @@ export default {
 <template>
   <div>
     <button id="btn-to-top" @click="backToTop" class="btn-to-top">
-      <img src="./icons/arrow.svg" style="height: 20px; width: 20px;" alt="">to top
+      <img src="./icons/arrow.svg" style="height: 20px; width: 20px;" alt="Arrow to the top">to top
     </button>
   </div>
 </template>

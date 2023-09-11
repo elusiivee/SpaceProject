@@ -10,10 +10,14 @@
             <div class="Head" >LET`s DISCOVER THE SPACE</div>
         </div> -->
         <div class="mainPlanet" style="background: rgb(237,144,46); background: linear-gradient(140deg, rgba(237,144,46,1) 0%, rgba(98,61,21,1) 36%, rgba(21,17,92,1) 95%);">
-          <img src="./icons/earth_poly.png" alt="" class="earth_poly">
-          <img src="./icons/moon_poly.png" alt="" class="moon_poly">
-          <img src="./icons/satelite.png" alt="" class="satelite_poly">
-          <img src="./icons/meteorit.png" alt="" class="commet_poly" style="top: -20em;left: -20em">
+          <img src="./icons/earth_poly.png" alt="animated earth" class="earth_poly">
+          <img src="./icons/moon_poly.png" alt="animated moon" class="moon_poly">
+          <img src="./icons/satelite.png" alt="animated satelite" class="satelite_poly">
+          <img src="./icons/meteorit.png" alt="animated meteorit" class="commet_poly" style="top: -20em;left: -30em">
+          <img src="./icons/meteorit.png" alt="animated meteorit" class="commet_poly" style="top: -10em;left: -10em">
+          <img src="./icons/meteorit.png" alt="animated meteorit" class="commet_poly" style="top: -30em;left: -20em">
+          <img src="./icons/meteorit.png" alt="animated meteorit" class="commet_poly" style="top: -30em;left: -40em">
+          <img src="./icons/meteorit.png" alt="animated meteorit" class="commet_poly" style="top: -30em;left: 0em">
         </div>
         <div class="orange-line" style="margin-bottom: 2rem;"></div>
         <div class="content-wrapper">
@@ -42,7 +46,7 @@
             <div class="boldtext title_head" style="margin-bottom: 1.5rem;">Mars Rover Photos</div>
             <div class="normal_text">
                 <div  style="float: right; margin: 0.5rem 1.5rem 1rem 0.5rem;">
-                    <img src="https://mars.nasa.gov//imgs/2017/10/mars_2020_cameras_labeled_web-full2.jpg" alt="Earth Polychromatic Imaging Camera" class="inImage" style="float: right;" >
+                    <img src="https://mars.nasa.gov//imgs/2017/10/mars_2020_cameras_labeled_web-full2.jpg" alt="Mars Rover" class="inImage" style="float: right;" >
                     <div style="margin-top: 0.5rem;">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
                 </div>
                 <div >The Mars Rover Photos API is a valuable resource created with the purpose of gathering and distributing image data captured by NASA's Mars rovers: Curiosity, Opportunity, and Spirit. The API aims to facilitate the accessibility of this rich source of Martian imagery, not only for the scientific community but also for developers, educators, and citizen scientists who are keen to explore and utilize these visual records of Mars' terrain. Chris Cerami is the dedicated individual responsible for maintaining this API, ensuring that it remains up-to-date and functional for its users. The effort put into curating and maintaining this resource underscores the commitment to sharing the wonders of space exploration with a wider audience.</div>
@@ -55,7 +59,7 @@
             <div class="boldtext title_head" style="margin-bottom: 1.5rem;">NASA's Technology Transfer Program</div>
             <div class="normal_text">
                 <div  style="float: left; margin: 0.5rem 1.5rem 1rem 0.5rem;">
-                    <img src="https://fi-hatchbox-production-uploads.s3.amazonaws.com/posts/1661394362_NASA_TechTransfer.png" alt="Earth Polychromatic Imaging Camera" class="inImage">
+                    <img src="https://fi-hatchbox-production-uploads.s3.amazonaws.com/posts/1661394362_NASA_TechTransfer.png" alt="NASA's Technology Transfer Program" class="inImage">
                     <div style="margin-top: 0.5rem;">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
                 </div>
                 <div >One of the key principles of NASA's Technology Transfer Program is to make the agency's innovations widely available. This means that the knowledge and technologies developed through space missions, research, and exploration are not limited to NASA's exclusive use but are shared with the public.</div>
@@ -107,16 +111,6 @@
   object-fit: contain;
   overflow: hidden;
 }
-.mainPlanet h1 {
-  position: absolute;
-  margin-bottom: 2rem;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  padding: .3em;
-  font-size: 3em;
-  font-weight: lighter;
-}
 
 .my-body {
   margin: 0;
@@ -149,89 +143,104 @@
     border-radius: 2rem;
 }
 
-.earth_poly{
-  width: 300px;
-  height: 300px;
+
+
+.earth_poly {
+  width: 20%; /* Use percentage-based sizing for responsiveness */
+  max-width: 300px; /* Limit the maximum size */
+  position: absolute;
+
   border-radius: 50%;
-  position: relative;
   z-index: 1;
   animation: planet-grow-shrink 4s infinite ease-in-out;
 }
-.moon_poly{
-    width: 125px;
-    height: 125px;
-    position: absolute;
-    left: 33em;
-    top:50%;
-    transform:translateY(-50%);
- 
-    animation: orbit 6s infinite ease-in-out;
 
-    z-index: 1;
-}
-.satelite_poly{
-  width: 125px;
-    height: 125px;
-    position: absolute;
-    left: 33em;
-    top:50%;
-    transform:translateY(-50%);
- 
-    animation: Satelite_orbit 10s infinite ease-in-out;
-
-    z-index: 1;
-}
-
-.commet_poly{
+.moon_poly,
+.satelite_poly {
+  width: 8%; /* Use percentage-based sizing for responsiveness */
+  max-width: 125px; /* Limit the maximum size */
   position: absolute;
-  animation: commet_way 6s infinite ease-in-out
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center both moon and satellite */
+  z-index: 1;
+}
 
-  
+.moon_poly {
+  left: 33%; /* Adjust the initial position relative to the center */
+  animation: orbit 6s infinite ease-in-out;
 }
+
+.satelite_poly {
+  left: 33%; /* Adjust the initial position relative to the center */
+  animation: Satelite_orbit 10s infinite ease-in-out;
+}
+
+.commet_poly {
+  width: 40px; /* Set a fixed width for the comet */
+  position: absolute;
+  animation: commet_way 6s infinite ease-in-out;
+}
+
 @keyframes orbit {
-  49%{z-index: 1;}
-  50%{left: 65em;
-      top: 23em;
-     z-index: 0;}
-  99%{z-index: 0;}
-  100%{
-    left: 33em;
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 65%;
+    top: 23%;
+    z-index: 0;
+  }
+  99% {
+    z-index: 0;
+  }
+  100% {
+    left: 33%;
     z-index: 1;
   }
 }
+
 @keyframes Satelite_orbit {
-  49%{z-index: 1;}
-  50%{left: 66em;
-      top: 16em;
-     z-index: 0;}
-  99%{z-index: 0;}
-  100%{
-    left: 33em;
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 66%;
+    top: 16%;
+    z-index: 0;
+  }
+  99% {
+    z-index: 0;
+  }
+  100% {
+    left: 33%;
     z-index: 1;
   }
 }
+
 @keyframes planet-grow-shrink {
-    0%, 100% {
-        transform: scale(1); /* Initial and final state (normal size) */
-    }
-    50% {
-        transform: scale(1.1); /* Middle state (scaled up) */
-    }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
+
 @keyframes commet_way {
   0% {
-        transform: translate(0, -50%) rotate(-100deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(90vw, 100vh) rotate(-120deg);
-        opacity: 0;
-        animation-delay: 5s;
-    }
+    transform: translate(-50%, -50%) rotate(-100deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(90vw, 100vh) rotate(-120deg);
+    opacity: 0;
+    animation-delay: 5s;
+  }
 }
-
 
 </style>

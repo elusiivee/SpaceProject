@@ -22,11 +22,11 @@ $(document).ready(function() {
 
 <template>
     <nav class="main-nav">
-        <div class="nav-bg"><div class="orange-line"></div></div>
+        <div class="nav-bg "><div class="orange-line"></div></div>
         <ul>
-        <RouterLink to="/"><li><a href="">Home</a></li></RouterLink>
+        <RouterLink to="/"><li><a href="" class="underline" >Home</a></li></RouterLink>
         
-        <RouterLink to="/about"><li><a href="">About</a></li></RouterLink>
+        <RouterLink to="/about"><li><a href="" class="underline" >About</a></li></RouterLink>
         </ul>
     
   </nav>
@@ -96,6 +96,28 @@ nav a:hover {
   top: 0;
   opacity: 1;
   height: 2.5rem;
+}
+.underline {
+  display: inline-block;
+  position: relative;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ed902e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 

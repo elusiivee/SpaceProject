@@ -56,7 +56,7 @@ export default {
         <div class="content">
               <div class="back">
                 <div class="back-content cartPhoto">
-                    <img src="./icons/asteroids.jpg" alt="">
+                    <img src="./icons/asteroids.jpg" alt="Asteroids photo. Page for more information about Space">
                 </div>
               </div>
               <div class="front">
@@ -70,7 +70,7 @@ export default {
     <div class="col-6">
       <div class="boldtext" style="margin-top: 7rem;">Astronomy Picture</div>
       <div class="normal_text" style="margin-top: 3rem;">The Astronomy Picture of the Day (APOD) stands as a shining star among NASA's online offerings. Its popularity is not confined within the realms of space enthusiasts and scientists but extends far beyond, akin to the widespread appeal of a viral Justin Bieber video. This captivating website has succeeded in captivating the imagination of people worldwide.</div>
-      <div><img src="./icons/moon.png" alt="" class="moon"></div>
+      <div><img src="./icons/moon.png" alt="animated moon" class="moon"></div>
     </div>
   </div>
 
@@ -84,7 +84,7 @@ export default {
         <div class="content">
               <div class="back">
                 <div class="back-content cartPhoto">
-                    <img src="./icons/earth.png" alt="">
+                    <img src="./icons/earth.png" alt="Earth photo. Page for more information about Earth">
                 </div>
               </div>
               <div class="front">
@@ -105,7 +105,7 @@ export default {
         <div class="content">
               <div class="back">
                 <div class="back-content cartPhoto">
-                    <img src="./icons/MarsRover.jpg" alt="">
+                    <img src="./icons/MarsRover.jpg" alt="Mars photo. Page for more information about Mars">
                 </div>
               </div>
               <div class="front">
@@ -125,7 +125,7 @@ export default {
 
   <div class="row">
     <div class="col-6">
-      <div><img src="./icons/spaceshuttle.png" alt="" class="spaceshuttle"></div>
+      <div><img src="./icons/spaceshuttle.png" alt="animated shuttle" class="spaceshuttle"></div>
       <div class="boldtext" style="margin-top: 7rem;">NASA's Technology Transfer Program</div>
       <div class="normal_text" style="margin-top: 3rem;">NASA's Technology Transfer Program is a groundbreaking initiative that plays a pivotal role in bridging the gap between space exploration and real-world applications. Born out of NASA's commitment to advancing scientific knowledge and benefiting society at large, the program aims to ensure that the cutting-edge technologies and innovations developed for space missions find practical applications here on Earth.</div>
     </div>
@@ -134,7 +134,7 @@ export default {
         <div class="content">
               <div class="back">
                 <div class="back-content cartPhoto">
-                    <img src="./icons/cosmonauts.jpg" alt="">
+                    <img src="./icons/cosmonauts.jpg" alt="Astronaut photo. Page for more information about technology">
                 </div>
               </div>
               <div class="front">

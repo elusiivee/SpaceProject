@@ -6,30 +6,30 @@
   <section class="mb-4">
 
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-facebook-f"><img class="footer-icon" src="./icons/icons8-github.svg" alt=""></i
+      ><i class="fab fa-facebook-f"><img class="footer-icon" src="./icons/icons8-github.svg" alt="Github icon"></i
     ></a>
 
 
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-twitter"><img class="footer-icon" src="./icons/icons8-instagram.svg" alt=""></i
+      ><i class="fab fa-twitter"><img class="footer-icon" src="./icons/icons8-instagram.svg" alt="INstagram icon"></i
     ></a>
 
 
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-google"><img class="footer-icon" src="./icons/icons8-telegram.svg" alt=""></i
+      ><i class="fab fa-google"><img class="footer-icon" src="./icons/icons8-telegram.svg" alt="Telegram icon"></i
     ></a>
 
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-instagram"><img class="footer-icon" src="./icons/icons8-facebook.svg" alt=""></i
+      ><i class="fab fa-instagram"><img class="footer-icon" src="./icons/icons8-facebook.svg" alt="Facebook icon"></i
     ></a>
 
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-linkedin-in"><img class="footer-icon" src="./icons/icons8-twitter.svg" alt=""></i
+      ><i class="fab fa-linkedin-in"><img class="footer-icon" src="./icons/icons8-twitter.svg" alt="Twitter icon"></i
     ></a>
 
 
     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-github"><img class="footer-icon" src="./icons/icons8-linkedin.svg" alt=""></i
+      ><i class="fab fa-github"><img class="footer-icon" src="./icons/icons8-linkedin.svg" alt="Linkedin icon"></i
     ></a>
   </section>
   
@@ -43,6 +43,9 @@
 
 
 <style scoped>
+.container_footer{
+  width: 100%;
+}
 .m-1{
   border-radius: 5rem;
   padding: 0.3rem;
