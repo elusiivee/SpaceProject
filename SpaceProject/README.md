@@ -1,35 +1,64 @@
-# SpaceProject
+# Galaxy Glance
 
-This template should help get you started developing with Vue 3 in Vite.
+**Service for obtaining information about space from other areas.**
 
-## Recommended IDE Setup
+## Table of Contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Project Structure](#project-structure)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Getting Started
 
-## Project Setup
+```bash
+# Creating a Vue Application
+npm create vue@latest
 
-```sh
+# Navigate to the project directory
+cd your-project
+
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Run your project
 npm run dev
 ```
+### Prerequisites
 
-### Compile and Minify for Production
+List any software or tools that need to be installed before running your project.
 
-```sh
-npm run build
+For example:
+- Node.js and npm
+- Vue CLI (if applicable)
+
+### Installation
+
+A step-by-step guide on how to install your project.
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/your-project.git
+
+# Navigate to the project directory
+cd your-project
+
+# Install dependencies
+npm install
+
+```
+### Project Structure
+```bash
+/
+|-- src/
+|   |-- assets/
+|   |-- components/
+|   |-- views/
+|   |-- App.vue
+|   |-- main.js
+|-- public/
+|-- package.json
+|-- README.md
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
