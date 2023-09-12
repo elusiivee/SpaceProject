@@ -114,11 +114,11 @@ $('description').keyup(function() {
       <div class="card cart-descr">
         <img :src="card.image" :alt="card.description" style="margin-bottom: 0.5rem;" />
         <p class="normal_text">{{ limit(card.description, 100) }}</p>
-        <button class="cart_btn" @click="openModal(card)">More</button>
+        <button class="cart_btn_more" @click="openModal(card)">More</button>
         <div v-if="card.showModal" class="modal-overlay">
           <div class="modal-content">
             <div class="modal-header">
-              <button @click="closeModal(card)" class="cart_btn closed">Close</button>
+              <button @click="closeModal(card)" class="cart_btn_closed">Close</button>
             </div>
             <div class="modal-body">
               <img :src="card.image" :alt="card.description" class="discr_img" />
@@ -271,7 +271,7 @@ header .overlay{
   object-fit: cover;
 }
 
-.cart_btn{
+.cart_btn_more{
     position: absolute;
     width: 6rem;
     height: 2rem;
@@ -281,16 +281,23 @@ header .overlay{
     border: 1px solid #333640;
     font-size: 17px;
     border-radius: 0.5rem;
-
     bottom: 0;
     left: 5%;
     
 }
-.cart_btn.closed{
-  background: #333640;
-  margin-bottom: 1rem;
-}
+.cart_btn_closed{
 
+    width: 6rem;
+    height: 3rem;
+    cursor: pointer;
+    color: #fff;
+    background: #1A1C22;
+    border: 1px solid #333640;
+    font-size: 17px;
+    border-radius: 2rem;
+    margin-bottom: 0.5rem;
+
+}
 
 .modal {
   background-color: white;

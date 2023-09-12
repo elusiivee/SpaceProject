@@ -92,9 +92,9 @@ export default {
             </div>
         </div>
             <div class="row input_text" >
-                <label for="year" class="col-4 col-form-label " >Year:</label>
-                <label for="month" class="col-4 col-form-label ">Month:</label>
-                <label for="day" class="col-4 col-form-label ">Day:</label>
+                <label for="year" class="col-2 col-form-label "  >Year:</label>
+                <label for="month" class="col-2 col-form-label ">Month:</label>
+                <label for="day" class="col-2 col-form-label ">Day:</label>
             </div>
             <section class="container_data normal_text">
                 
@@ -252,6 +252,7 @@ header .overlay{
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+  
 }
 .container_carousel{
   margin: 0 auto;
@@ -287,6 +288,9 @@ header .overlay{
 .input_text{
   font-family: Trirong;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .spaceman {
