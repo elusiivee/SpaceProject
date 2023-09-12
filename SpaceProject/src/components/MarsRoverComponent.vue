@@ -72,23 +72,30 @@ export default {
         </div>
     </div>
       
-      <section class="container_data normal_text">
-        <form class="row">
-      <label for="year" class="col-2 col-form-label" >Year:</label>
-      <div class="col-2">
-        <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
-      </div>
-      <label for="month" class="col-2 col-form-label">Month:</label>
-      <div class="col-2">
-        <input type="text" placeholder="01-12" class="form-control" id="month" v-model="month" pattern="^(0[1-9]|1[0-2])$" required>
-      </div>
-      <label for="day" class="col-2 col-form-label">Day:</label>
-      <div class="col-2">
-        <input type="text" placeholder="01-31" class="form-control" id="day" v-model="day" pattern="^(0[1-9]|[12][0-9]|3[01])$" required>
-      </div>
-      <button class="btn btn-primary" type='button' @click="fetchData()" style="margin-top: 1rem;">Save</button>
-    </form>
-      </section>
+                            <div class="row input_text" >
+                            <label for="year" class="col-4 col-form-label" >Year:</label>
+                            <label for="month" class="col-4 col-form-label">Month:</label>
+                            <label for="day" class="col-4 col-form-label">Day:</label>
+                          </div>
+                        <section class="container_data normal_text">
+                          
+                            <form class="input_row">
+                            
+                            
+                                <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
+                            
+                            
+                            
+                                <input type="text" placeholder="01-12" class="form-control" id="month" v-model="month" pattern="^(0[1-9]|1[0-2])$" required>
+                            
+                            
+                            
+                                <input type="text" placeholder="01-31" class="form-control" id="day" v-model="day" pattern="^(0[1-9]|[12][0-9]|3[01])$" required>
+                            
+                            
+                            </form>
+                            <button class="btn btn-primary" type='button' @click="fetchDateData()" style="margin-top: 1rem;">get photo</button>
+                        </section>
 
       <div class="gallery row">
       <div
@@ -184,7 +191,15 @@ header .overlay{
   margin-bottom: 2.5rem;
 }
 
-
+.container_data {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
 
 .orange-line {
     height: 2px;
@@ -202,16 +217,7 @@ header .overlay{
     border: 2px solid black;
 }
 
-/* .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-} */
 
-/* .gallery-item {
-  flex: 0 0 calc(33.33% - 20px); 
-  margin: 10px;
-} */
 
 .gallery-image {
   border-radius: 0.5rem;
@@ -232,9 +238,35 @@ header .overlay{
     background-color: #ed902e;
     border: none;
 }
-
 .btn:hover{
   background-color: rgb(199, 120, 37)
 }
+.form-control{
+  float: left;
+  width: 32%;
+  text-align: center;
+  margin: 0rem 0.2rem ;
+  text-decoration: none;
 
+}
+.input_text{
+  font-family: Trirong;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .input_text{
+    display: none;
+  }
+  .form-control {
+    float: none;
+    width: 100%;
+  }
+
+}
 </style>

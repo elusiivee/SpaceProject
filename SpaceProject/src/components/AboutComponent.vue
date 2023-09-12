@@ -146,7 +146,7 @@
   margin-bottom: 2.5rem;
 }
 .inImage{
-    width: 500px;
+    width: 400px;
     border-radius: 2rem;
 }
 

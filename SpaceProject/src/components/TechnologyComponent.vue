@@ -360,16 +360,16 @@ header .overlay{
     
 }
 @keyframes spaceman-move {
-    from{
-        transform: translateX(70%) translateY(-80%);
+  from{
+        transform: translateX(-65%) translateY(-150%);
     }
 
     50%{
-        transform: translateX(0%) translateY(-110%);
+        transform: translateX(-55%) translateY(-110%);
     }
 
     to{
-        transform: translateX(70%) translateY(-80%);
-      }
-    }   
+        transform: translateX(-65%) translateY(-150%);
+    }
+  }
 </style>

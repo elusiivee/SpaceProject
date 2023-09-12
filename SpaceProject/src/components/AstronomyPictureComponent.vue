@@ -89,7 +89,7 @@ export default {
             </button>
         
             <div class="collapse" id="currentday" style="margin-top: 1rem;">
-                <div class="card card-body">
+                <div class="card">
                     <div class="container_pict">
                         <button class="btn btn-primary" type='button' @click="fetchCurrentData()" style="margin-top: 1rem;">get photo</button>
                         <div v-for="(item, index) in DayPhotoTD" :key="index">
@@ -115,30 +115,37 @@ export default {
                 <img src="./icons/arrow_down.png" style="width: 15px; height: 15px; " alt="arrow down">
             </button>
         
-            <div class="collapse " id="dateday" style="margin-top: 1rem;">
-                <div class="card card-body">
-                    <div class="container_pict">
-                        <section class="container_data normal_text">
-                            <form class="row">
-                            <label for="year" class="col-2 col-form-label" >Year:</label>
-                            <div class="col-2">
-                                <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
-                            </div>
-                            <label for="month" class="col-2 col-form-label">Month:</label>
-                            <div class="col-2">
-                                <input type="text" placeholder="01-12" class="form-control" id="month" v-model="month" pattern="^(0[1-9]|1[0-2])$" required>
-                            </div>
-                            <label for="day" class="col-2 col-form-label">Day:</label>
-                            <div class="col-2">
-                                <input type="text" placeholder="01-31" class="form-control" id="day" v-model="day" pattern="^(0[1-9]|[12][0-9]|3[01])$" required>
-                            </div>
-                            <button class="btn btn-primary" type='button' @click="fetchDateData()" style="margin-top: 1rem;">get photo</button>
-                            </form>
-                        </section>
+          <div class="collapse " id="dateday" style="margin-top: 1rem;">
+              <div class="card">
+                  <div class="container_pict" >
+                    <div class="row input_text" >
+                          <label for="year" class="col-4 col-form-label" >Year:</label>
+                          <label for="month" class="col-4 col-form-label">Month:</label>
+                          <label for="day" class="col-4 col-form-label">Day:</label>
+                        </div>
+                      <section class="container_data normal_text">
+                        
+                          <form class="input_row">
+                          
+                          
+                              <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
+                          
+                          
+                          
+                              <input type="text" placeholder="01-12" class="form-control" id="month" v-model="month" pattern="^(0[1-9]|1[0-2])$" required>
+                          
+                          
+                          
+                              <input type="text" placeholder="01-31" class="form-control" id="day" v-model="day" pattern="^(0[1-9]|[12][0-9]|3[01])$" required>
+                          
+                          
+                          </form>
+                          <button class="btn btn-primary" type='button' @click="fetchDateData()" style="margin-top: 1rem;">get photo</button>
+                      </section>
 
                         
-                            <div class="card card-body ">
-                                <div class="container_pict ">
+                            <div class="card">
+                                <div class="col-4  ">
                                     <div class="normal_text" v-for="(item, index) in DayPhotoDate" :key="index">
                                         <h2 style="margin-top: 1rem;">{{ item.title }}</h2>
                                         <p>{{ item.explanation }}</p>
@@ -222,6 +229,7 @@ header .overlay{
   text-shadow: 1px 1px 1px #333;
   background-image: url('./icons/earth_main.jpg');
   background-size: 100%;
+  background-repeat: no-repeat;
   overflow: hidden;
   
 }
@@ -303,24 +311,56 @@ header .overlay{
 .spaceman {
   position: absolute;
     left: 80%;
-    transform: translateX(70%) translateY(-80%) ;    
+    transform: translateX(-100%) translateY(-80%) ;    
     width: 200px;    
     animation: spaceman-move 7s infinite ease-in-out;
-    
+
+}
+.form-control{
+  float: left;
+  width: 32%;
+  text-align: center;
+  margin: 0rem 0.2rem ;
+  text-decoration: none;
+
 }
 @keyframes spaceman-move {
     from{
-        transform: translateX(70%) translateY(-80%);
+        transform: translateX(-50%) translateY(-90%);
     }
 
     50%{
-        transform: translateX(0%) translateY(-110%);
+        transform: translateX(-60%) translateY(-110%);
     }
 
     to{
-        transform: translateX(70%) translateY(-80%);
+        transform: translateX(-50%) translateY(-90%);
     }
 }
+
+
+@media screen and (max-width: 600px) {
+  .spaceman {
+    display: none;
+  }
+  .input_text{
+    display: none;
+  }
+  .form-control {
+    float: none;
+    width: 100%;
+  }
+
+  
+}
+
+
+
+.input_text{
+  width: 60%;
+  margin: 0 auto;
+}
+
 .nasa_link{
   color: white;
   font-size: 20px;

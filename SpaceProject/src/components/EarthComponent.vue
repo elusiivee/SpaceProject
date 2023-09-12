@@ -91,25 +91,30 @@ export default {
                   </ul>  
             </div>
         </div>
-
-
-    <section class="container_data normal_text">
-    <form class="row">
-      <label for="year" class="col-2 col-form-label" >Year:</label>
-      <div class="col-2">
-        <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
-      </div>
-      <label for="month" class="col-2 col-form-label">Month:</label>
-      <div class="col-2">
-        <input type="text" placeholder="01-12" class="form-control" id="month" v-model="month" pattern="^(0[1-9]|1[0-2])$" required>
-      </div>
-      <label for="day" class="col-2 col-form-label">Day:</label>
-      <div class="col-2">
-        <input type="text" placeholder="01-31" class="form-control" id="day" v-model="day" pattern="^(0[1-9]|[12][0-9]|3[01])$" required>
-      </div>
-      <button class="btn btn-primary" type='button' @click="fetchData()" style="margin-top: 1rem;">Save</button>
-    </form>
-  </section>
+            <div class="row input_text" >
+                <label for="year" class="col-4 col-form-label " >Year:</label>
+                <label for="month" class="col-4 col-form-label ">Month:</label>
+                <label for="day" class="col-4 col-form-label ">Day:</label>
+            </div>
+            <section class="container_data normal_text">
+                
+                <form class="input_row">
+                
+                
+                    <input type="text" placeholder="2023" class="form-control" id="year" v-model="year" pattern="20(1[5-9]|[2-9])" required>
+                
+                
+                
+                    <input type="text" placeholder="01-12" class="form-control" id="month" v-model="month" pattern="^(0[1-9]|1[0-2])$" required>
+                
+                
+                
+                    <input type="text" placeholder="01-31" class="form-control" id="day" v-model="day" pattern="^(0[1-9]|[12][0-9]|3[01])$" required>
+                
+                
+                </form>
+                <button class="btn btn-primary" type='button' @click="fetchData()" style="margin-top: 1rem;">get photo</button>
+            </section>
 
 
   <div class="container_carousel" v-if="earthimg.length>0">
@@ -229,6 +234,7 @@ header .overlay{
   background-color: #ed902e;
   margin: 30px 0px 30px 0px;
 }
+
 .card{
     margin-bottom: 1rem;
     font-family: Trirong;
@@ -270,6 +276,19 @@ header .overlay{
 .btn:hover{
   background-color: rgb(199, 120, 37)
 }
+.form-control{
+  float: left;
+  width: 32%;
+  text-align: center;
+  margin: 0rem 0.2rem ;
+  text-decoration: none;
+
+}
+.input_text{
+  font-family: Trirong;
+  font-weight: 700;
+  text-align: center;
+}
 .spaceman {
   position: absolute;
     left: 80%;
@@ -280,18 +299,34 @@ header .overlay{
 }
 @keyframes spaceman-move {
     from{
-        transform: translateX(70%) translateY(-80%);
+        transform: translateX(-50%) translateY(-90%);
     }
 
     50%{
-        transform: translateX(0%) translateY(-110%);
+        transform: translateX(-60%) translateY(-110%);
     }
 
     to{
-        transform: translateX(70%) translateY(-80%);
-      }
-    }   
+        transform: translateX(-50%) translateY(-90%);
+    }
+}
 
+
+@media screen and (max-width: 600px) {
+  .spaceman {
+    display: none;
+  }
+  .input_text{
+    display: none;
+  }
+  .form-control {
+    float: none;
+    width: 100%;
+  }
+
+}
+
+    
 .nasa_link{
   color: white;
   font-size: 20px;
