@@ -145,14 +145,13 @@ export default {
 
                         
                             <div class="card">
-                                <div class="col-4  ">
+
                                     <div class="normal_text" v-for="(item, index) in DayPhotoDate" :key="index">
                                         <h2 style="margin-top: 1rem;">{{ item.title }}</h2>
                                         <p>{{ item.explanation }}</p>
                                         <img :src="item.image" class="planet_image" :alt="item.title">
                                         <div class="nasa_link" style="text-align: center;">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
                                     </div>
-                                </div>
                             </div>
                             
                         
@@ -275,6 +274,7 @@ header .overlay{
     background-color:transparent;
     color: #ffffff;
     border: none;
+    text-align: center;
 }
 .container_data {
   width: 60%;

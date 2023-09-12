@@ -94,7 +94,7 @@ export default {
                             
                             
                             </form>
-                            <button class="btn btn-primary" type='button' @click="fetchDateData()" style="margin-top: 1rem;">get photo</button>
+                            <button class="btn btn-primary" type='button' @click="fetchData()" style="margin-top: 1rem;">get photo</button>
                         </section>
 
       <div class="gallery row">

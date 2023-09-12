@@ -421,4 +421,11 @@ video {
         transform: translateX(-10%) translateY(-30%)  rotate(50deg);
     }
 }
+
+@media screen and (max-width: 900px) {
+  .moon {
+    display: none;
+  }
+  
+}
 </style>
