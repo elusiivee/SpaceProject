@@ -171,27 +171,29 @@ export default {
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@400;700&display=swap');
 
+.normal_text{
+  font-family: 'Orbitron', sans-serif;
+    font-weight: 700;  
+    font-size: 1rem;
+    text-indent: 1.5em;
+    line-height: 2; 
+}
+
+.boldtext{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;  
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #ed902e;
+}
 input:invalid {
   border-color: red;
 }
 
-.normal_text{
-  font-family: Trirong;
-    font-weight: 700;  
-    font-size: 1.2rem;
-    text-indent: 1.5em;
-}
-
-.boldtext{
-  font-family: Trirong;
-  font-weight: 700;  
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  color: #ed902e;
-}
 .my-body {
   margin: 0;
   padding: 0;
@@ -201,7 +203,7 @@ input:invalid {
   /* background: #1A1C22; */
   background: rgb(187,116,41);
   background: linear-gradient(220deg, rgba(187,116,41,1) 0%, rgba(26,28,34,1) 48%);
-  color: white;
+  color: rgb(213, 213, 213);
 
 }
 
@@ -216,7 +218,7 @@ header {
   overflow: hidden;
   border-radius: 0 0 85% 85% / 10%;
   color: #ed902e;
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;   
   font-size: 60px;
 }
@@ -233,7 +235,7 @@ header .overlay{
   
 }
 .overlay:hover{
-  text-shadow: 0px 0px 20px #ed902e;
+  text-shadow: 0px 0px 10px #ed902e;
 }
 
 .mainPlanet h1 {
@@ -268,7 +270,7 @@ header .overlay{
 }
 .card{
     margin-bottom: 1rem;
-    font-family: Trirong;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
     font-size: 1.0rem;
     background-color:transparent;
@@ -299,7 +301,7 @@ header .overlay{
 }
 .btn{
     margin-left: 1rem;
-    font-family: Trirong;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
     font-size: 1.2rem;
     background-color: #ed902e;

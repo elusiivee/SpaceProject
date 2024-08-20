@@ -154,20 +154,21 @@ export default {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 
 .normal_text{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-indent: 1.5em;
+    line-height: 2; 
 }
 
 .boldtext{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;  
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   color: #ed902e;
 }
@@ -176,12 +177,13 @@ export default {
 .my-body {
   margin: 0;
   padding: 0;
-  background-image: url('./icons/bdstarsdark2.jpg');
+  background-image: url('./icons/bdstarsdark1.jpg');
   background-size: 110% ;
   /* background: #1A1C22; */
   justify-content: center; 
   align-items: center;
-  color: white;
+  color: rgb(213, 213, 213);
+
 
 
 }
@@ -189,15 +191,15 @@ export default {
 
 
 .Head {
-  color: rgb(255, 255, 255);
+  color: rgb(213, 213, 213);
   text-align: center;
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;   
   font-size: 60px;
   z-index: 1;
 }
 .Head:hover{
-  text-shadow: 0px 0px 20px #ed902e;
+  text-shadow: 0px 0px 10px #ed902e;
 }
 
 .mainPlanet {
@@ -268,6 +270,8 @@ video {
   width: 99%;
   height: 99%;
   object-fit: cover;
+  border-radius: 2rem;
+
 }
 .content {
   width: 100%;
@@ -296,6 +300,7 @@ video {
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-radius: 2rem;
 }
 
 .back::before {
@@ -350,6 +355,7 @@ video {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  border-radius: 2rem;
 }
 
 .front-content .badge {

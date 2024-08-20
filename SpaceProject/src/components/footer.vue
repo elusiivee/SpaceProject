@@ -35,7 +35,7 @@
   
 </div>
 
-<div class="nasa_link p-3" style="background-color: rgba(0, 0, 0, 0.2);">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
+<div class="nasa_link p-3 normal_text" style="background-color: rgba(0, 0, 0, 0.2);">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
 <div class="nasa_link p-3" style="background-color: rgba(0, 0, 0, 0.2);"></div>
 </footer>
 </template>
@@ -43,6 +43,25 @@
 
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+
+.normal_text{
+  font-family: 'Orbitron', sans-serif;
+    font-weight: 700;  
+    font-size: 1rem;
+    text-indent: 1.5em;
+    line-height: 2; 
+}
+
+.boldtext{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;  
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #ed902e;
+}
 .container_footer{
   width: 100%;
 }

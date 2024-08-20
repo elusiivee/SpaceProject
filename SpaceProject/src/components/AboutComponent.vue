@@ -33,7 +33,7 @@
             <div class="boldtext title_head" style="margin-bottom: 1.5rem;">Earth Polychromatic Imaging Camera (EPIC)</div>
             <div class="normal_text">
                 <div  style="float: left; margin: 0.5rem 1.5rem 1rem 0.5rem;">
-                    <img src="https://www.nasa.gov/sites/default/files/dscovr_epic.jpg" alt="Earth Polychromatic Imaging Camera" class="inImage">
+                    <img src="https://epic.gsfc.nasa.gov/contents/assets/Image_002.jpg" alt="Earth Polychromatic Imaging Camera" class="inImage">
                     <div style="margin-top: 0.5rem;">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
                 </div>
                 <div >Earth Polychromatic Imaging Camera, represents a remarkable achievement in the realm of space exploration and Earth observation. It provides a unique perspective on our planet, offering a daily stream of awe-inspiring imagery captured by the Earth Polychromatic Imaging Camera, or EPIC, aboard the Deep Space Climate Observatory (DSCOVR) spacecraft. At its core, the EPIC API serves as a virtual portal to the Earth from space, granting us access to a treasure trove of visual data that showcases our planet's stunning natural beauty, weather patterns, and dynamic landscapes as seen from a truly unparalleled vantage point. Unlike conventional Earth observation satellites, which are often positioned in low Earth orbit, the DSCOVR spacecraft is stationed at a much greater distance—about one million miles away from Earth. This unique location provides a breathtaking, full-disc view of our planet that few have had the privilege to witness.</div>
@@ -46,7 +46,7 @@
             <div class="boldtext title_head" style="margin-bottom: 1.5rem;">Mars Rover Photos</div>
             <div class="normal_text">
                 <div  style="float: right; margin: 0.5rem 1.5rem 1rem 0.5rem;">
-                    <img src="https://mars.nasa.gov//imgs/2017/10/mars_2020_cameras_labeled_web-full2.jpg" alt="Mars Rover" class="inImage" style="float: right;" >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/1920px-NASA_Mars_Rover.jpg" alt="Mars Rover" class="inImage" style="float: right;" >
                     <div style="margin-top: 0.5rem;">Source: <a  href="https://api.nasa.gov/" style="color: #ed902e;">NASA api</a></div>
                 </div>
                 <div >The Mars Rover Photos API is a valuable resource created with the purpose of gathering and distributing image data captured by NASA's Mars rovers: Curiosity, Opportunity, and Spirit. The API aims to facilitate the accessibility of this rich source of Martian imagery, not only for the scientific community but also for developers, educators, and citizen scientists who are keen to explore and utilize these visual records of Mars' terrain. Chris Cerami is the dedicated individual responsible for maintaining this API, ensuring that it remains up-to-date and functional for its users. The effort put into curating and maintaining this resource underscores the commitment to sharing the wonders of space exploration with a wider audience.</div>
@@ -75,20 +75,21 @@
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 
 .normal_text{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-indent: 1.5em;
+    line-height: 2; 
 }
 
 .boldtext{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;  
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   color: #ed902e;
 }
@@ -119,7 +120,7 @@
   align-items: center;
   background-size: 100% ;
   background: #1A1C22;
-  color: white;
+  color: rgb(213, 213, 213);
 
   
 }

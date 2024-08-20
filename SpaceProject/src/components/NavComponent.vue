@@ -24,9 +24,9 @@ $(document).ready(function() {
     <nav class="main-nav">
         <div class="nav-bg "><div class="orange-line"></div></div>
         <ul>
-        <RouterLink to="/"><li><a href="" class="underline" >Home</a></li></RouterLink>
+        <RouterLink to="/"><li><a href="" class="underline">Home</a></li></RouterLink>
         
-        <RouterLink to="/about"><li><a href="" class="underline" >About</a></li></RouterLink>
+        <RouterLink to="/about"><li><a href="" class="underline">About</a></li></RouterLink>
         </ul>
     
   </nav>
@@ -34,7 +34,16 @@ $(document).ready(function() {
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
+
+.normal_text{
+  font-family: 'Orbitron', sans-serif;
+    font-weight: 700;  
+    font-size: 1rem;
+    text-indent: 1.5em;
+    line-height: 2; 
+}
 .main-nav {
   position: fixed;
   z-index: 9999;
@@ -42,10 +51,11 @@ $(document).ready(function() {
   left: 0;
   width: 100%;
   height: 35px;
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;  
   font-size: 1.15em;
   letter-spacing: 1px;
+  color: rgb(213, 213, 213);
 
 }
 
@@ -65,7 +75,7 @@ nav ul li {
 nav a {
   width: 100%;
   height: 100%;
-  color: white;
+  color: rgb(213, 213, 213);
   text-decoration: none;
 
 }

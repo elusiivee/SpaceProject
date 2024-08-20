@@ -113,18 +113,19 @@ export default {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 
 .normal_text{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-indent: 1.5em;
+    line-height: 2; 
 }
 
 .boldtext{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;  
   font-size: 2rem;
   letter-spacing: 1px;
@@ -137,7 +138,7 @@ export default {
   padding: 0;
   background-size: 100% ;
   background: #1A1C22;
-  color: white;
+  color: rgb(213, 213, 213);
   justify-content: center; 
   align-items: center;
 }
@@ -157,7 +158,7 @@ header {
   overflow: hidden;
   border-radius: 0 0 85% 85% / 10%;
   color: #ed902e;
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;   
   font-size: 60px;
 }
@@ -174,7 +175,7 @@ header .overlay{
   
 }
 .overlay:hover{
-  text-shadow: 0px 0px 20px #ed902e;
+  text-shadow: 0px 0px 10px #ed902e;
 }
 
 
@@ -209,7 +210,7 @@ header .overlay{
 }
 .card{
     margin-bottom: 1rem;
-    font-family: Trirong;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
     font-size: 1.0rem;
     background-color:transparent;
@@ -232,7 +233,7 @@ header .overlay{
 }
 .btn{
     margin-left: 1rem;
-    font-family: Trirong;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
     font-size: 1.2rem;
     background-color: #ed902e;
@@ -250,7 +251,7 @@ header .overlay{
 
 }
 .input_text{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   display: flex;
   justify-content: center;

@@ -35,15 +35,13 @@ export default {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
 
-.btn_text{
-  font-family: Trirong;
-    font-weight: 700;  
-    font-size: 1.2rem;
-}
 .btn-to-top {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
   padding: 0.4rem 1rem 0.4rem 1rem;
   position: fixed;
   bottom: 0px;

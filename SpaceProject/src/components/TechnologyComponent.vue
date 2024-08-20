@@ -150,26 +150,24 @@ $('description').keyup(function() {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=Trirong:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 
 .normal_text{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
     font-weight: 700;  
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-indent: 1.5em;
+    line-height: 2; 
 }
 
 .boldtext{
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;  
   font-size: 2rem;
   letter-spacing: 1px;
   color: #ed902e;
 }
-
-
-
 
 .my-body {
   margin: 0;
@@ -178,12 +176,9 @@ $('description').keyup(function() {
   align-items: center;
   background-size: 100% ;
   background: #1A1C22;
-  color: white;
+  color: rgb(213, 213, 213);
 
 }
-
-
-
 body{height: 900px;}
 header {
   background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
@@ -196,7 +191,7 @@ header {
   overflow: hidden;
   border-radius: 0 0 85% 85% / 10%;
   color: #ed902e;
-  font-family: Trirong;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;   
   font-size: 60px;
   
@@ -214,7 +209,7 @@ header .overlay{
   
 }
 .overlay:hover{
-  text-shadow: 0px 0px 20px #ed902e;
+  text-shadow: 0px 0px 10px #ed902e;
 }
 
 .mainPlanet h1 {
@@ -258,7 +253,7 @@ header .overlay{
   margin-bottom: 1rem;
   border-radius: 1rem;
   padding: 0.5rem;
-  color: white;
+  color: rgb(213, 213, 213);
   background-color:#333 ;
   transition-duration: 0.3s;
 
@@ -272,6 +267,8 @@ header .overlay{
 }
 
 .cart_btn_more{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
     position: absolute;
     width: 6rem;
     height: 2rem;
@@ -286,7 +283,8 @@ header .overlay{
     
 }
 .cart_btn_closed{
-
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
     width: 6rem;
     height: 3rem;
     cursor: pointer;
