@@ -1,6 +1,6 @@
 # Galaxy Glance
 
-**Service for obtaining information about space from other areas.**
+**Service for obtaining information about space from diferent areas.**
 
 ## Table of Contents
 
